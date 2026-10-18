@@ -20,7 +20,7 @@ in Play Console. Keep it true to what the app does, and bump `pages.privacy.modi
 
 - `playListingLive`: set to `true` the day the Play listing is public (the badges then link to it)
 - `price`, `freeTrialDays`: keep in sync with the Play listing and the privacy policy
-- `workoutUrl`: switch to `https://workout.ironbuddy.fit` once that site is live
+
 
 ## Develop
 

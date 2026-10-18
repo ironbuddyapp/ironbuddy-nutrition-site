@@ -28,8 +28,8 @@ export const siteConfig = {
   url: "https://nutrition.ironbuddy.fit",
   /** The brand home page. */
   brandUrl: "https://ironbuddy.fit",
-  /** The sister app's site. Still ironbuddy.fit until workout.ironbuddy.fit is live; then switch. */
-  workoutUrl: "https://ironbuddy.fit",
+  /** The sister app's site. */
+  workoutUrl: "https://workout.ironbuddy.fit",
   locale: "en_US",
   /**
    * LAUNCH SWITCH. False until the Play listing is public: the Google Play badges show "coming soon" and link
