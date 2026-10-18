@@ -31,7 +31,7 @@ p { margin-top: 22px; font-size: 26px; line-height: 1.35; color: #a8b0bd; }
 <div class="text">
   <div class="brand"><img src="${logo}" alt="">IronBuddy: Nutrition Tracker</div>
   <div class="eyebrow">For Android · Offline</div>
-  <h1>Snap it, scan it or weigh it.</h1>
+  <h1>Photo. Scan. Weigh.</h1>
   <p>Calories and macros with honest numbers: every meal says Exact or Estimate.</p>
   <div class="pills"><span>No account</span><span>No ads</span><span>Pay once</span></div>
 </div>

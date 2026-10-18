@@ -28,7 +28,7 @@ export type FeatureIcon =
 /** Every card states something the app does today (see the app's CHANGELOG). Do not add features that are not shipped. */
 export const features: Array<{ title: string; description: string; icon: FeatureIcon }> = [
   {
-    title: "Snap Your Plate",
+    title: "Photograph Your Plate",
     description: "Recognised on your phone. You pick portion and oil.",
     icon: "camera",
   },

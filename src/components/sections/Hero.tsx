@@ -29,7 +29,7 @@ export function Hero() {
             </span>
           </h1>
           <p className="mt-2 text-sm font-semibold tracking-tight text-white/85 sm:text-base lg:mt-3 lg:text-2xl">
-            Snap it, scan it or weigh it. Honest numbers, pay once.
+            Photo. Scan. Weigh. Honest numbers, pay once.
           </p>
 
           <ul

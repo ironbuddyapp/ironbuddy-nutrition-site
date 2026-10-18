@@ -40,7 +40,7 @@ export const pages = {
     label: "Home",
     title: "IronBuddy: Nutrition Tracker – Offline Calorie Counter",
     description:
-      "Offline calorie and macro tracker for Android: snap your plate, scan a barcode or weigh it. Honest numbers, built for people who train. Pay once, no account.",
+      "Offline calorie and macro tracker for Android: photograph your plate, scan a barcode or weigh it. Honest numbers for people who train. Pay once, no account.",
     summary: "The offline calorie and macro tracker: photo, barcode or scale, honest numbers, pay once.",
     published: LAUNCH,
     modified: LAUNCH,
