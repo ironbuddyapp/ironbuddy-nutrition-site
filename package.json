@@ -7,7 +7,8 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "seo:check": "node scripts/check-seo.mjs"
+    "seo:check": "node scripts/check-seo.mjs",
+    "deploy": "node scripts/deploy.mjs"
   },
   "dependencies": {
     "react": "19.1.0",

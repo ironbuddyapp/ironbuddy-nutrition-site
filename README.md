@@ -11,7 +11,7 @@ in Play Console. Keep it true to what the app does, and bump `pages.privacy.modi
 
 - Next.js 15 App Router, static export (`out/`)
 - TypeScript, Tailwind CSS v4
-- GitHub Pages, deployed by `.github/workflows/pages.yml` on every push to `main`
+- GitHub Pages, served from the `gh-pages` branch; publish with `node scripts/deploy.mjs` (builds, checks, pushes)
 - No analytics, no cookies
 
 ## Configure
@@ -38,6 +38,16 @@ npm run seo:check
 
 `seo:check` validates titles, descriptions, canonicals, headings, structured data, links, the sitemap, robots.txt
 and llms.txt in `out/`, and exits with an error if anything is wrong.
+
+## Deploy
+
+```bash
+node scripts/deploy.mjs
+```
+
+It refuses to run with uncommitted changes, builds, runs the SEO check, and pushes `out/` (plus `.nojekyll` and
+`CNAME`) to `gh-pages`. A GitHub Actions version is ready in `docs/pages-workflow.yml` for when the GitHub login
+has the `workflow` permission (see the comment at the top of the deploy script).
 
 ## Images
 
