@@ -21,7 +21,7 @@ export type PageDef = {
 
 const LAUNCH = "2026-10-18";
 /** The label reader and the optional Google Lens hand-off are described (section 4). */
-const LENS = "2026-10-19";
+const LENS = "2026-10-20";
 
 /** The current screenshot set (appScreenshots in content.ts). */
 const screenshotImages = [

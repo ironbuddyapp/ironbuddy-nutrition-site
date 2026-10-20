@@ -101,7 +101,9 @@ export default function PrivacyPage() {
             <li>Everything you enter (meals, weight, body details, your goal) is stored on your phone only.</li>
             <li>There is no account, no IronBuddy server and no cloud sync. We never receive your data.</li>
             <li>
-              Photos of your plate and of barcodes are read on your phone and are never stored or sent anywhere.
+              Photos of your plate, of barcodes and of nutrition labels are read on your phone and are never sent to
+              us. The only exception is one you choose: if you tap &quot;Read with Google Lens&quot;, that one label
+              photo is handed to Google&apos;s app (section 4).
             </li>
             <li>The App has no ads, no analytics and no crash-reporting service. We do not sell or share data.</li>
             <li>
@@ -127,8 +129,8 @@ export default function PrivacyPage() {
           </p>
           <p>
             This policy covers the IronBuddy: Nutrition Tracker app for Android distributed on Google Play, including
-            its testing versions. It does not cover Google Play, Android&apos;s backup service, or the apps and
-            services you choose to send files to (for example email, Google Drive or messaging apps). Our other app,
+            its testing versions. It does not cover Google Play, Android&apos;s backup service, Google Lens and the
+            Google app, or the apps and services you choose to send files to (for example email, Google Drive or messaging apps). Our other app,
             IronBuddy: Workout Tracker, has <TextLink href={`${siteConfig.brandUrl}/privacy/`}>its own policy</TextLink>.
           </p>
         </ContentSection>
@@ -176,18 +178,31 @@ export default function PrivacyPage() {
               or to read the numbers on a nutrition label.
             </li>
             <li>
-              It is shown on screen while you confirm the meal, then discarded. The App never saves it, never adds it
-              to your gallery and never sends it anywhere.
+              It is shown on screen while you confirm the meal, then discarded. The App never adds it to your gallery
+              and never sends it to us. If you use Google Lens (below), the App keeps that one label photo as a
+              temporary file in its private storage so Google&apos;s app can open it, and deletes it when you come back.
             </li>
             <li>The App does not use the camera in the background and does not record video or sound.</li>
           </BulletList>
           <p>
-            <Strong>Google Lens (optional).</Strong> On Android, a product form offers &quot;Read with Google
-            Lens&quot;. If you choose it, the App opens Google&apos;s own app, and the photo you take there is
-            processed by Google under Google&apos;s terms and privacy policy, not by IronBuddy. When you come back,
-            the App reads the text you copied in Lens from your clipboard, once, to fill in the label&apos;s numbers.
-            The App itself still sends nothing to Google or to us. If you never tap that button, Google Lens is never
-            involved.
+            <Strong>Google Lens (optional).</Strong> On Android, the nutrition-label form offers &quot;Read with Google
+            Lens&quot; for labels the App&apos;s own reader cannot manage. Only if you tap it, the App hands the label
+            photo (the one you just took, or a new one) to Google Lens in the Google app on your phone. If Lens&apos;s
+            own share screen is not available, Android&apos;s share sheet opens instead and you choose the app. From
+            that moment the photo is in Google&apos;s app, not ours: Google receives and processes it under its own terms
+            and <GooglePolicyLink />, as part of your own use of Google&apos;s services. If you have turned on Visual
+            Search History in your Google account, Google may keep the image there; see{" "}
+            <TextLink href="https://support.google.com/websearch/answer/14601082">Google&apos;s help page</TextLink>.
+          </p>
+          <p>
+            In Lens you select the label&apos;s text and tap Copy yourself. When you come back, the App reads your
+            clipboard once and uses the text only if it was copied after you left for Lens. It picks out the nutrition
+            numbers on your phone, fills in the form for you to check, and does not keep the copied text. Android may
+            show a short &quot;IronBuddy Nutrition pasted from your clipboard&quot; notice when this happens. The App
+            never reads the clipboard at any other time, and it receives nothing else from Google: no account details
+            and no search results other than the text you copied. IronBuddy itself still sends nothing to Google or to
+            us. If you never tap that button, Google Lens is never involved and you can always type the numbers
+            instead.
           </p>
         </ContentSection>
 
@@ -237,7 +252,11 @@ export default function PrivacyPage() {
             <li>send your meals, body data, photos or settings to any server, ours or anyone else&apos;s;</li>
             <li>contain advertising, analytics or crash-reporting code;</li>
             <li>sell, rent or share personal data;</li>
-            <li>access your location, contacts, microphone or other apps&apos; data;</li>
+            <li>
+              access your location, contacts, microphone or other apps&apos; data, except two things for Google Lens:
+              checking whether Google&apos;s app is installed, and reading the text you copied in Lens, once, when you
+              come back (section 4);
+            </li>
             <li>receive your payment details (these stay with Google Play).</li>
           </BulletList>
         </ContentSection>
@@ -310,6 +329,11 @@ export default function PrivacyPage() {
               Download folder, and to read a backup file you choose to import. After a reinstall, Android may ask you
               to choose the IronBuddy Nutrition folder once; the App then reaches only that folder.
             </li>
+            <li>
+              <Strong>Google app visibility and clipboard (no permission needed):</Strong> the App can see whether
+              Google&apos;s app is installed, only to offer Google Lens, and it reads the clipboard only once after you
+              return from Lens (section 4). It cannot see your other apps.
+            </li>
           </BulletList>
         </ContentSection>
 
@@ -364,8 +388,10 @@ export default function PrivacyPage() {
 
         <ContentSection id="third-party" title="16. Third-party services and this website">
           <p>
-            Google Play (purchases, review prompts, update notices) and Android&apos;s backup are run by Google under
-            its own terms; see <GooglePolicyLink />. Apps you share files to are covered by their own policies.
+            Google Play (purchases, review prompts, update notices), Android&apos;s backup, and Google Lens in the
+            Google app (only if you choose it, section 4) are run by Google under its own terms; see{" "}
+            <GooglePolicyLink />. Apps you share files to are covered by their own policies. Google Lens is a trademark
+            of Google LLC; IronBuddy is not made, endorsed or sponsored by Google.
           </p>
           <p>
             <Strong>This website</Strong> (nutrition.ironbuddy.fit) uses no cookies, no analytics and no tracking. It
