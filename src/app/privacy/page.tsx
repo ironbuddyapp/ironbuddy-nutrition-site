@@ -24,7 +24,7 @@ const contents = [
   ["applies-to", "2. Who we are and what this covers"],
   ["data-on-device", "3. Data stored on your device"],
   ["camera", "4. Camera and photos"],
-  ["recognition", "5. Food recognition on your phone"],
+  ["recognition", "5. Food recognition and label reading on your phone"],
   ["purchases", "6. Purchases and payment"],
   ["google-play", "7. Review prompts and update notices"],
   ["not-collected", "8. Data we do not collect"],
@@ -206,16 +206,16 @@ export default function PrivacyPage() {
           </p>
         </ContentSection>
 
-        <ContentSection id="recognition" title="5. Food recognition on your phone">
+        <ContentSection id="recognition" title="5. Food recognition and label reading on your phone">
           <p>
-            Dish suggestions come from a food recognition model (Google&apos;s open-source AIY food classifier) that
-            is built into the App and runs entirely on your phone, using Google&apos;s open-source MediaPipe software.
-            No photo, result or usage information is sent to Google or to us.
+            Dish suggestions come from a food recognition model (SigLIP 2, an open model published by Google) that is
+            built into the App and runs entirely on your phone, using ONNX Runtime, open-source software from Microsoft.
+            Nutrition labels are read on your phone too, with PaddleOCR&apos;s open-source text models, also built into
+            the App.
           </p>
           <p>
-            MediaPipe&apos;s web version normally reports usage statistics (such as which feature ran and how long it
-            took, but not images) to Google. The App blocks this: it does not allow any connection from its interface
-            except to its own built-in files, so these reports never leave your phone.
+            No photo, result or usage information is sent to Google, Microsoft or anyone else, or to us: the App does
+            not allow any connection from its interface except to its own built-in files.
           </p>
         </ContentSection>
 
