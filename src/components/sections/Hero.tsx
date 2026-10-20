@@ -21,7 +21,7 @@ export function Hero() {
           {/* The eyebrow is part of the H1 so the page's main heading names what the app is. */}
           <h1 className="max-w-xl">
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface py-1.5 pl-2.5 pr-3.5 font-[family-name:var(--font-display)] text-xs font-medium tracking-[0.04em] text-primary">
-              <span aria-hidden className="h-2 w-2 rounded-full bg-primary shadow-[0_0_12px_rgba(199,146,180,0.9)]" />
+              <span aria-hidden className="h-2 w-2 rounded-full bg-primary shadow-[0_0_12px_rgba(242,179,61,0.9)]" />
               {siteConfig.fullName} for Android
               <span className="sr-only">. </span>
             </span>

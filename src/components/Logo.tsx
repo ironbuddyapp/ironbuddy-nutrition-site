@@ -11,7 +11,7 @@ export function Logo({ className }: { className?: string }) {
         height={32}
         decoding="async"
         fetchPriority="high"
-        className="h-8 w-8 rounded-lg shadow-[0_0_24px_rgba(199,146,180,0.22)]"
+        className="h-8 w-8 rounded-lg shadow-[0_0_24px_rgba(242,179,61,0.22)]"
       />
       <span className="text-[15px] font-semibold tracking-tight text-white">{siteConfig.fullName}</span>
     </span>

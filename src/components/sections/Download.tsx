@@ -12,7 +12,7 @@ export function Download() {
       <Container className="flex h-full min-h-0 flex-col justify-center">
         <Reveal>
           <div className="relative overflow-hidden rounded-[2rem] border border-primary/20 bg-surface px-6 py-10 text-center sm:px-12 sm:py-20">
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(199,146,180,0.14),transparent_55%)]" />
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(242,179,61,0.14),transparent_55%)]" />
             <div className="relative">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
                 Download

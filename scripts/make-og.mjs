@@ -13,18 +13,18 @@ const font = `data:font/woff2;base64,${b64("public/fonts/space-grotesk/latin.wof
 const html = `<!doctype html><html><head><style>
 @font-face { font-family: Jakarta; src: url(${font}) format("woff2"); font-weight: 200 800; }
 * { margin: 0; box-sizing: border-box; }
-body { width: 1200px; height: 630px; background: radial-gradient(circle at 90% 0%, rgba(199,146,180,.22), rgba(199,146,180,0) 50%), #151013; color: #ede8eb; font-family: Jakarta, sans-serif; position: relative; overflow: hidden; }
-.glow { position: absolute; width: 560px; height: 560px; border-radius: 50%; background: radial-gradient(circle, rgba(199,146,180,.18), transparent 65%); right: 40px; top: 30px; }
+body { width: 1200px; height: 630px; background: radial-gradient(circle at 90% 0%, rgba(242,179,61,.22), rgba(242,179,61,0) 50%), #14110d; color: #f0ebe3; font-family: Jakarta, sans-serif; position: relative; overflow: hidden; }
+.glow { position: absolute; width: 560px; height: 560px; border-radius: 50%; background: radial-gradient(circle, rgba(242,179,61,.18), transparent 65%); right: 40px; top: 30px; }
 .text { position: absolute; left: 72px; top: 92px; width: 640px; }
 .brand { display: flex; align-items: center; gap: 16px; font-size: 26px; font-weight: 600; }
 .brand img { width: 56px; height: 56px; border-radius: 14px; }
-.eyebrow { margin-top: 44px; font-size: 18px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #c792b4; }
+.eyebrow { margin-top: 44px; font-size: 18px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #f2b33d; }
 h1 { margin-top: 14px; font-size: 62px; line-height: 1.06; font-weight: 700; letter-spacing: -.02em; }
-p { margin-top: 22px; font-size: 26px; line-height: 1.35; color: #a696a0; }
+p { margin-top: 22px; font-size: 26px; line-height: 1.35; color: #a89f92; }
 .pills { margin-top: 30px; display: flex; gap: 12px; }
-.pills span { border: 1px solid #392d35; background: #1e181c; border-radius: 999px; padding: 8px 18px; font-size: 19px; color: #ede8eb; }
+.pills span { border: 1px solid #3a3226; background: #1e1a15; border-radius: 999px; padding: 8px 18px; font-size: 19px; color: #f0ebe3; }
 .phone { position: absolute; right: 96px; top: 54px; width: 300px; height: 650px; border-radius: 44px; border: 1px solid rgba(255,255,255,.14); background: #000; padding: 9px; box-shadow: 0 40px 90px -20px rgba(0,0,0,.8); }
-.phone div { width: 100%; height: 100%; border-radius: 36px; overflow: hidden; background: #1e181c; }
+.phone div { width: 100%; height: 100%; border-radius: 36px; overflow: hidden; background: #1e1a15; }
 .phone img { width: 100%; display: block; }
 </style></head><body>
 <div class="glow"></div>

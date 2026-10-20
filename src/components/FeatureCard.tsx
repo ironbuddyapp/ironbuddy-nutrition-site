@@ -25,7 +25,7 @@ export function FeatureCard({
     </>
   );
   const className =
-    "group block rounded-2xl border border-white/8 bg-surface p-3 transition duration-300 hover:-translate-y-1 hover:border-primary/25 hover:shadow-[0_24px_60px_-32px_rgba(199,146,180,0.35)] sm:rounded-3xl sm:p-6 lg:p-7";
+    "group block rounded-2xl border border-white/8 bg-surface p-3 transition duration-300 hover:-translate-y-1 hover:border-primary/25 hover:shadow-[0_24px_60px_-32px_rgba(242,179,61,0.35)] sm:rounded-3xl sm:p-6 lg:p-7";
   if (href) {
     return (
       <article>

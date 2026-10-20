@@ -8,7 +8,7 @@ import "./fonts.css";
 import "./globals.css";
 
 export const viewport: Viewport = {
-  themeColor: "#151013",
+  themeColor: "#14110d",
   colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
