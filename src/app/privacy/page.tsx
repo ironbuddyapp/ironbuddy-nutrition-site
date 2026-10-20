@@ -140,7 +140,7 @@ export default function PrivacyPage() {
           <BulletList>
             <li>
               <Strong>Food log:</Strong> the meals you log (name, amount in grams, calories, protein, carbs, fat,
-              meal of the day and date), your saved meals, your pots and meal-prep boxes, and products you add by
+              meal of the day and date), your saved meals, and products you add by
               barcode.
             </li>
             <li>
@@ -204,6 +204,15 @@ export default function PrivacyPage() {
             us. If you never tap that button, Google Lens is never involved and you can always type the numbers
             instead.
           </p>
+          <p>
+            To get back from Lens with one tap, the App can show a notification while Lens is open (&quot;Copied the
+            table? Tap to go back&quot;). On Android 13 and later it asks for permission to show it the first time you
+            open Lens from the App; you can say no and press Back instead. The notification is created on your phone,
+            holds none of your data, and is removed when you return. The App shows no other notifications. You can also
+            share text to the App yourself (for example with Share on Android&apos;s &quot;copied&quot; preview): the
+            App picks out the nutrition numbers on your phone, fills in the form for you to check, and does not keep
+            the text.
+          </p>
         </ContentSection>
 
         <ContentSection id="recognition" title="5. Food recognition and label reading on your phone">
@@ -255,7 +264,7 @@ export default function PrivacyPage() {
             <li>
               access your location, contacts, microphone or other apps&apos; data, except two things for Google Lens:
               checking whether Google&apos;s app is installed, and reading the text you copied in Lens, once, when you
-              come back (section 4);
+              come back, or text you choose to share to the App (section 4);
             </li>
             <li>receive your payment details (these stay with Google Play).</li>
           </BulletList>
@@ -332,7 +341,12 @@ export default function PrivacyPage() {
             <li>
               <Strong>Google app visibility and clipboard (no permission needed):</Strong> the App can see whether
               Google&apos;s app is installed, only to offer Google Lens, and it reads the clipboard only once after you
-              return from Lens (section 4). It cannot see your other apps.
+              return from Lens, or text you choose to share to the App (section 4). It cannot see your other apps.
+            </li>
+            <li>
+              <Strong>Notifications (Android 13 and later, optional):</Strong> only the one &quot;Tap to go back&quot;
+              notification while Google Lens is open (section 4). No reminders, offers or other notifications. You can
+              turn it off at any time in Android&apos;s settings for the App.
             </li>
           </BulletList>
         </ContentSection>

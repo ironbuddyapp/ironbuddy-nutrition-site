@@ -79,7 +79,7 @@ export const appFeatureList = [
   "Daily calorie target and protein, carbs and fat for your goal, including lose fat and build muscle",
   "Weekly check-in: real maintenance from your logs and weight, with a suggested new target",
   "What can I still eat: saved meals that fit what is left today",
-  "Pots and meal prep: weigh the pot once, every plate is exact",
+  "Read a nutrition label by camera, on the phone",
   "Body weight trend",
   "Share cards and a CSV or PDF export for a coach (full version)",
   "Customizable Today: cards you move, resize, add and remove (full version)",
