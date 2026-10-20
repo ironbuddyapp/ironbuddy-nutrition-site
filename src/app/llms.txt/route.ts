@@ -16,7 +16,7 @@ export function GET() {
   const body = [
     `# ${siteConfig.fullName}`,
     "",
-    `> IronBuddy: Nutrition Tracker is an offline calorie and macro tracker for Android, made for people who train. Meals are logged three ways: a photo of the plate (the dish is recognised on the phone and the user picks the portion and any extra oil), a barcode (about a million packaged products are built into the app), or the food search with grams from a kitchen scale (about 12,000 foods and dishes from USDA, FNDDS and CIQUAL). Every number is marked Exact (measured) or Estimate (with a range). It sets a daily calorie and protein target for goals including lose fat, build muscle, and a weekly check-in suggests a new target from the user's own logs and weigh-ins. There is no account, no ads and no analytics; data stays on the phone. Free to download with a ${siteConfig.freeTrialDays}-day free trial, then a one-time purchase of ${siteConfig.price.label} through Google Play.`,
+    `> IronBuddy: Nutrition Tracker is an offline calorie and macro tracker for Android, made for people who train. Meals are logged three ways: a photo of the plate (the dish is recognised on the phone and the user picks the portion and any extra oil), a barcode (about a million packaged products are built into the app), or the food search with grams from a kitchen scale (about 12,000 foods and dishes from USDA, FNDDS and CIQUAL). Every number is marked Exact (measured) or Estimate (with a range). It sets a daily calorie and protein target for goals including lose fat, build muscle, and a weekly check-in suggests a new target from the user's own logs and weigh-ins. There is no account, no ads and no analytics; data stays on the phone. Free to download with a ${siteConfig.freeTrialDays}-day free trial, then a one-time purchase through Google Play (Google Play shows the price for each country).`,
     "",
     "Key facts:",
     "",
@@ -28,7 +28,7 @@ export function GET() {
     "- Ads: none. Analytics: none",
     "- Subscription: none",
     `- Free trial: ${trialDetails.includes} ${trialDetails.unlocks} ${trialDetails.afterTrial}`,
-    `- Price: ${siteConfig.price.label} one-time, after the ${siteConfig.freeTrialDays}-day free trial (Google Play shows the final amount for your country)`,
+    `- Price: a one-time purchase after the ${siteConfig.freeTrialDays}-day free trial; Google Play shows the amount for each country`,
     `- Developer: ${siteConfig.developerName}, also makers of IronBuddy: Workout Tracker (${siteConfig.workoutUrl})`,
     `- Contact: ${siteConfig.contactEmail}`,
     "",

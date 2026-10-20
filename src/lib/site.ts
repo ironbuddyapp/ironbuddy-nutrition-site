@@ -1,11 +1,10 @@
 /** Length of the free trial. Keep in sync with the privacy policy (section 4) and the Play listing. */
 const freeTrialDays = 7;
 
-/**
- * One-time price charged after the trial. Keep in sync with the Play listing. Google Play shows it in local
- * currency, so the amount a visitor sees there can differ slightly by country and tax.
+/*
+ * No price on the site, by the owner's rule: Google Play sets the one-time price per country, so the site only says
+ * "a one-time purchase through Google Play" and Play shows the amount (scripts/check-seo.mjs fails on a price).
  */
-const price = { amount: "7", currency: "EUR", label: "€7" } as const;
 
 const playStoreId = "com.ironbuddy.nutrition";
 /** The listing's canonical address, for structured data and app links. */
@@ -57,5 +56,4 @@ export const siteConfig = {
   ogImageAlt:
     "IronBuddy: Nutrition Tracker for Android: photograph your plate, scan a barcode or weigh it. Offline, no account, pay once.",
   freeTrialDays,
-  price,
 } as const;

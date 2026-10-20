@@ -20,10 +20,13 @@ export type PageDef = {
 };
 
 const LAUNCH = "2026-10-18";
+/** The label reader and the optional Google Lens hand-off are described (section 4). */
+const LENS = "2026-10-19";
 
 /** The current screenshot set (appScreenshots in content.ts). */
 const screenshotImages = [
   "/screenshots/ironbuddy-nutrition-today-calories-protein.webp",
+  "/screenshots/ironbuddy-nutrition-one-camera.webp",
   "/screenshots/ironbuddy-nutrition-photo-portion-oil.webp",
   "/screenshots/ironbuddy-nutrition-barcode-scanner.webp",
   "/screenshots/ironbuddy-nutrition-weigh-food-exact.webp",
@@ -66,7 +69,7 @@ export const pages = {
       "Privacy policy of IronBuddy: Nutrition Tracker. Your meals, weight and photos stay on your phone: no account, no analytics, nothing sent to us.",
     summary: "What the app keeps on your phone, and what it never sends anywhere.",
     published: LAUNCH,
-    modified: LAUNCH,
+    modified: LENS,
   },
 } as const satisfies Record<string, PageDef>;
 

@@ -166,18 +166,29 @@ export default function PrivacyPage() {
 
         <ContentSection id="camera" title="4. Camera and photos">
           <p>
-            The App uses the camera only when you tap to take a photo of your plate or of a barcode. You can also pick
-            an existing picture with Android&apos;s photo picker, in which case the App receives only the picture you
-            choose.
+            The App uses the camera only when you tap to take a photo of your plate, of a barcode or of a nutrition
+            label. You can also pick an existing picture with Android&apos;s photo picker, in which case the App
+            receives only the picture you choose.
           </p>
           <BulletList>
-            <li>The picture is read on your phone: to suggest which dish it is, or to read the barcode digits.</li>
+            <li>
+              The picture is read on your phone: to suggest which foods are on the plate, to read the barcode digits,
+              or to read the numbers on a nutrition label.
+            </li>
             <li>
               It is shown on screen while you confirm the meal, then discarded. The App never saves it, never adds it
               to your gallery and never sends it anywhere.
             </li>
             <li>The App does not use the camera in the background and does not record video or sound.</li>
           </BulletList>
+          <p>
+            <Strong>Google Lens (optional).</Strong> On Android, a product form offers &quot;Read with Google
+            Lens&quot;. If you choose it, the App opens Google&apos;s own app, and the photo you take there is
+            processed by Google under Google&apos;s terms and privacy policy, not by IronBuddy. When you come back,
+            the App reads the text you copied in Lens from your clipboard, once, to fill in the label&apos;s numbers.
+            The App itself still sends nothing to Google or to us. If you never tap that button, Google Lens is never
+            involved.
+          </p>
         </ContentSection>
 
         <ContentSection id="recognition" title="5. Food recognition on your phone">
@@ -277,14 +288,15 @@ export default function PrivacyPage() {
             Nothing you enter is sent to us or to any server. The food database (from USDA, CIQUAL and Open Food
             Facts), the barcode list and the food recognition model are copies built into the App, so every lookup
             happens on your phone. The App&apos;s only network use is Google Play (purchase, review prompt, update
-            check) and links you choose to open in your browser, such as this policy.
+            check), links you choose to open in your browser, such as this policy, and Google Lens if you choose to open it
+            (section 4), which is Google&apos;s app, not ours.
           </p>
         </ContentSection>
 
         <ContentSection id="permissions" title="11. Permissions">
           <BulletList>
             <li>
-              <Strong>Camera:</Strong> only when you tap to photograph a plate or a barcode (section 4).
+              <Strong>Camera:</Strong> only when you tap to photograph a plate, a barcode or a nutrition label (section 4).
             </li>
             <li>
               <Strong>Internet:</Strong> needed by Google Play for the purchase, the review prompt and update notices,

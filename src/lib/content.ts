@@ -2,7 +2,7 @@ import { pages } from "@/lib/pages";
 import { siteConfig } from "@/lib/site";
 
 export const heroBullets = [
-  "Photo, Barcode or Scale",
+  "Plate, Barcode or Label",
   "Works Offline",
   "One-Time Purchase",
   "No Account, No Ads",
@@ -75,7 +75,8 @@ export const features: Array<{ title: string; description: string; icon: Feature
 ];
 
 /**
- * App screenshots in public/screenshots/ (WebP, 720 × 1560, recorded 18 October 2026 with sample data). `carousel: true`
+ * App screenshots in public/screenshots/ (WebP, 720 × 1560, recorded 20 October 2026 with sample data in the app's default
+ * dark Fig look, by the app repo's scripts/store/capture-site.mjs). `carousel: true`
  * marks the current set: it drives the home page carousel, the structured data and the image sitemap.
  */
 export const screenshots = [
@@ -83,7 +84,16 @@ export const screenshots = [
     id: "today",
     file: "ironbuddy-nutrition-today-calories-protein.webp",
     label: "Today",
-    alt: "IronBuddy Nutrition calorie counter Today screen: 775 kcal left of 2,030, protein ring 108 of 164 g, meals marked Exact or Estimate",
+    alt: "IronBuddy Nutrition calorie counter Today screen: about 391 kcal left of 2,040, protein 129 of 164 g, six meals each marked Exact or Estimate",
+    width: 720,
+    height: 1560,
+    carousel: true,
+  },
+  {
+    id: "camera",
+    file: "ironbuddy-nutrition-one-camera.webp",
+    label: "One Camera",
+    alt: "Shot, one camera button for a plate, a barcode or a nutrition label: the app works out which, on the phone",
     width: 720,
     height: 1560,
     carousel: true,
@@ -92,7 +102,7 @@ export const screenshots = [
     id: "photo",
     file: "ironbuddy-nutrition-photo-portion-oil.webp",
     label: "Photo of Your Plate",
-    alt: "Photo food logging: lasagna with meat, normal portion of about 206 g, a little extra oil, about 326 kcal, estimate 277–375",
+    alt: "Photo food logging: baked salmon from the plate photo, normal portion of about 150 g, olive oil picked as an extra",
     width: 720,
     height: 1560,
     carousel: true,
@@ -101,7 +111,7 @@ export const screenshots = [
     id: "barcode",
     file: "ironbuddy-nutrition-barcode-scanner.webp",
     label: "Barcode Scanner",
-    alt: "Offline barcode scanner: Coca-Cola Original Taste, one 250 g serving, 105 kcal, Exact from the label",
+    alt: "Offline barcode scanner: Greek yogurt 2%, one 200 g serving, 146 kcal, Exact from the label",
     width: 720,
     height: 1560,
     carousel: true,
@@ -110,7 +120,7 @@ export const screenshots = [
     id: "weigh",
     file: "ironbuddy-nutrition-weigh-food-exact.webp",
     label: "Weigh It",
-    alt: "Food scale logging: 180 g of chicken breast, 198 kcal and 42.1 g protein, marked Exact",
+    alt: "Food scale logging: 185 g of cooked white rice, 241 kcal, marked Exact",
     width: 720,
     height: 1560,
     carousel: true,
@@ -119,7 +129,7 @@ export const screenshots = [
     id: "stillEat",
     file: "ironbuddy-nutrition-what-can-i-still-eat.webp",
     label: "What Can I Still Eat?",
-    alt: "What can I still eat: saved meals that fit the calories and protein left today, each logged with one tap",
+    alt: "What can I still eat: with about 391 kcal and 35 g protein left, saved meals that fit, each logged with one tap",
     width: 720,
     height: 1560,
     carousel: true,
@@ -128,7 +138,7 @@ export const screenshots = [
     id: "checkIn",
     file: "ironbuddy-nutrition-weekly-check-in.webp",
     label: "Weekly Check-in",
-    alt: "Weekly check-in: ate 2,003 kcal on average, weight moved -0.7 kg a week, real maintenance 2,770 kcal, suggested 2,220 kcal",
+    alt: "Weekly check-in: ate 1,930 kcal on average, weight moved -0.51 kg a week, real maintenance 2,490 kcal, suggested 1,940 kcal",
     width: 720,
     height: 1560,
     carousel: true,
@@ -137,7 +147,7 @@ export const screenshots = [
     id: "plan",
     file: "ironbuddy-nutrition-calorie-macro-plan.webp",
     label: "Your Daily Plan",
-    alt: "Macro calculator result: maintenance 2,580 kcal, target 2,030 kcal, 164 g protein, carbs and fat, to lose about 0.5 kg a week",
+    alt: "Macro calculator result: maintenance 2,590 kcal, target 2,040 kcal, 164 g protein, 218 g carbs, 57 g fat, to lose about 0.5 kg a week",
     width: 720,
     height: 1560,
     carousel: true,
@@ -146,7 +156,7 @@ export const screenshots = [
     id: "meals",
     file: "ironbuddy-nutrition-saved-meals.webp",
     label: "My Meals",
-    alt: "Saved meals logged again in two taps: overnight oats, tuna salad, cottage cheese and berries, all Exact",
+    alt: "My meals: two pots for meal prep and saved meals logged again in two taps, oats with milk and banana, Greek yogurt with honey, all Exact",
     width: 720,
     height: 1560,
     carousel: true,
@@ -175,7 +185,7 @@ export type Faq = {
 /** What the free trial includes and what happens after it, in one place so every page says the same thing. */
 export const trialDetails = {
   includes: `The ${siteConfig.freeTrialDays}-day free trial includes everything: photo logging, barcodes, the food search, your plan, Today, My meals, pots, weight and the weekly check-in.`,
-  unlocks: `Buying the app for ${siteConfig.price.label} once keeps everything unlocked after the trial, and adds the backup file, export and import of your data, share cards, the export for a coach, a customizable Today and accent colours.`,
+  unlocks: `Buying the app once keeps everything unlocked after the trial, and adds the backup file, export and import of your data, share cards, the export for a coach, a customizable Today and accent colours.`,
   afterTrial:
     "If you don't buy, the app becomes read-only when the trial ends: nothing is deleted and your meals stay visible, but logging and editing need the purchase.",
 } as const;
@@ -196,7 +206,7 @@ export const homeFaqs: Faq[] = [
   {
     id: "price",
     question: "How much does it cost?",
-    answer: `It is free to download with a ${siteConfig.freeTrialDays}-day free trial of everything. After that, one payment of ${siteConfig.price.label} keeps it unlocked for good. No subscription, no ads.`,
+    answer: `It is free to download with a ${siteConfig.freeTrialDays}-day free trial of everything. After that, one payment through Google Play keeps it unlocked for good; Play shows the price for your country. No subscription, no ads.`,
   },
   {
     id: "exact",

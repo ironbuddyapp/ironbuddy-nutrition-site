@@ -20,16 +20,17 @@ export function Hero() {
         <div className="animate-fade-up max-lg:order-2 max-lg:min-h-0">
           {/* The eyebrow is part of the H1 so the page's main heading names what the app is. */}
           <h1 className="max-w-xl">
-            <span className="block text-xs font-semibold uppercase tracking-[0.22em] text-primary">
+            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface py-1.5 pl-2.5 pr-3.5 font-[family-name:var(--font-display)] text-xs font-medium tracking-[0.04em] text-primary">
+              <span aria-hidden className="h-2 w-2 rounded-full bg-primary shadow-[0_0_12px_rgba(199,146,180,0.9)]" />
               {siteConfig.fullName} for Android
               <span className="sr-only">. </span>
             </span>
-            <span className="mt-2 block text-[1.65rem] font-semibold leading-[1.1] tracking-tight text-white lg:mt-4 lg:text-[3.4rem] lg:leading-[1.08]">
-              Calorie counter that works offline.
+            <span className="mt-3 block text-[1.85rem] font-semibold leading-[1.05] tracking-tight text-white lg:mt-6 lg:text-[3.9rem] lg:leading-[1.02]">
+              Calorie counter that works <span className="text-primary-glow">offline.</span>
             </span>
           </h1>
           <p className="mt-2 text-sm font-semibold tracking-tight text-white/85 sm:text-base lg:mt-3 lg:text-2xl">
-            Photo. Scan. Weigh. Honest numbers, pay once.
+            One camera for your plate, a barcode or a label. Honest numbers, pay once.
           </p>
 
           <ul
@@ -47,14 +48,14 @@ export function Hero() {
           </ul>
 
           <p className="mt-3 hidden max-w-lg text-sm leading-relaxed text-muted sm:mt-5 sm:text-base lg:block lg:text-lg">
-            IronBuddy Nutrition is a calorie and macro tracker for people who train. Take a photo of your plate, scan
-            a barcode or weigh your food, and every number tells you whether it&apos;s exact or an estimate. Everything
+            IronBuddy Nutrition is a calorie and macro tracker for people who train. Point one camera at your plate, a
+            barcode or a nutrition label, or weigh your food, and every number tells you whether it&apos;s exact or an estimate. Everything
             stays on your phone, with no account and no ads.
           </p>
 
           <ul className="mt-8 hidden grid-cols-2 gap-3 lg:mt-8 lg:grid">
             {heroBullets.map((item) => (
-              <li key={item} className="flex items-center gap-2.5 text-sm text-white">
+              <li key={item} className="flex items-center gap-2.5 rounded-full border border-border bg-surface px-3 py-1.5 text-sm text-white">
                 <span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary/15 text-primary">
                   <Icon name="check" className="h-3 w-3" />
                 </span>

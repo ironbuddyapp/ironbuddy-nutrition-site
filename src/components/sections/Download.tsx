@@ -12,7 +12,7 @@ export function Download() {
       <Container className="flex h-full min-h-0 flex-col justify-center">
         <Reveal>
           <div className="relative overflow-hidden rounded-[2rem] border border-primary/20 bg-surface px-6 py-10 text-center sm:px-12 sm:py-20">
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(183,255,42,0.14),transparent_55%)]" />
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(199,146,180,0.14),transparent_55%)]" />
             <div className="relative">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
                 Download
@@ -21,8 +21,8 @@ export function Download() {
                 Download IronBuddy Nutrition: pay once, eat for your goal.
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted sm:text-lg">
-                Free to download with a {siteConfig.freeTrialDays}-day free trial. After that, pay{" "}
-                {siteConfig.price.label} once to keep it all unlocked, with no subscription. Your
+                Free to download with a {siteConfig.freeTrialDays}-day free trial. After that, one purchase
+                through Google Play keeps it all unlocked, with no subscription. Your
                 meals stay on your phone, and the app works without a connection.
               </p>
               <div className="mt-8 flex justify-center">

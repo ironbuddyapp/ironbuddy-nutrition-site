@@ -144,16 +144,14 @@ for (const p of indexable) {
         need(bc.itemListElement[0].item === `${ORIGIN}/`, "breadcrumb starts at home");
       }
     }
+    need(!/[€$£]\s?\d|\d\s?(€|EUR|USD)\b/.test(textOf(html)), "no price in the page text: Google Play sets it per country");
     const app = nodes.find((n) => [].concat(n["@type"]).includes("MobileApplication"));
     if (urlPath === "/") {
       need(app && [].concat(app["@type"]).includes("SoftwareApplication"), "MobileApplication+SoftwareApplication");
       need(app?.operatingSystem === "Android" && app?.applicationCategory === "HealthApplication", "app OS/category");
       need(app?.offers?.description, "offers.description");
-      need(app?.offers && String(app.offers.price ?? "") !== "0", "offers.price must not be 0: the app requires a purchase after the free trial");
-      if (app?.offers?.price) {
-        need(app.offers.priceCurrency, "offers.priceCurrency is required alongside price");
-        need(textOf(html).includes(app.offers.price), `offers.price ${app.offers.price} must be visible in the page text (markup has to match what visitors see)`);
-      }
+      // No price: Google Play sets it per country (owner's rule). Never "0" either, which would say the app is free.
+      need(app?.offers && app.offers.price == null && app.offers.priceCurrency == null, "offers must not state a price: Google Play sets it per country");
       need(app?.screenshot?.length >= 3, "at least 3 screenshots");
       for (const shot of app?.screenshot ?? []) {
         const file = path.join(out, new URL(shot.contentUrl).pathname);

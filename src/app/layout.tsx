@@ -8,7 +8,7 @@ import "./fonts.css";
 import "./globals.css";
 
 export const viewport: Viewport = {
-  themeColor: "#050B14",
+  themeColor: "#151013",
   colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
@@ -73,12 +73,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Same as next/font's preload: fetch the Latin font file early, since every page uses it.
-  preload("/fonts/plus-jakarta-sans/latin.woff2", {
-    as: "font",
-    type: "font/woff2",
-    crossOrigin: "anonymous",
-  });
+  // Fetch the Latin text and heading fonts early, since every page uses both (Plus Jakarta Sans is only a fallback now).
+  for (const file of ["/fonts/inter/latin.woff2", "/fonts/space-grotesk/latin.woff2"]) {
+    preload(file, { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
+  }
 
   return (
     <html lang="en" className="dark">

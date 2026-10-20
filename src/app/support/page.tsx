@@ -111,8 +111,8 @@ export default function SupportPage() {
               The {siteConfig.freeTrialDays}-day free trial includes everything. No payment is needed to start.
             </li>
             <li>
-              After the trial, one payment of {siteConfig.price.label} through Google Play keeps everything unlocked
-              for good. There is no subscription and nothing renews.
+              After the trial, one payment through Google Play keeps everything unlocked for good; Google Play shows
+              the price for your country. There is no subscription and nothing renews.
             </li>
             <li>
               If you don&apos;t buy, nothing is deleted: your meals stay visible, and logging and editing wait until

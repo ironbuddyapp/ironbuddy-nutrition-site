@@ -116,16 +116,13 @@ function appNode(): JsonLdNode {
           sameAs: [siteConfig.playStoreUrl],
         }
       : {}),
-    // The download is free, but after the trial a one-time purchase is required to keep logging and editing. `price` is
-    // that one-time price, never "0" (which would tell search engines and AI systems the app is free). It must also
-    // appear in the page text (it does, in the Download section), because markup has to match what visitors can see.
+    // The download is free, but after the trial a one-time purchase is required to keep logging and editing. No
+    // `price`: Google Play sets it per country and the site never states one (and never "0", which would say free).
     // Add an aggregateRating only when it is genuine and shown on the page.
     offers: {
       "@type": "Offer",
-      price: siteConfig.price.amount,
-      priceCurrency: siteConfig.price.currency,
       category: "Free trial, then one-time purchase",
-      description: `Free to download with a ${siteConfig.freeTrialDays}-day free trial of everything. After the trial, a one-time in-app purchase of ${siteConfig.price.label} through Google Play keeps everything unlocked and is required to keep logging and editing; it also adds the backup file, export and import, share cards, the export for a coach and a customizable Today. No subscription.`,
+      description: `Free to download with a ${siteConfig.freeTrialDays}-day free trial of everything. After the trial, a one-time in-app purchase through Google Play keeps everything unlocked and is required to keep logging and editing; Google Play shows the price for each country. It also adds the backup file, export and import, share cards, the export for a coach and a customizable Today. No subscription.`,
     },
     author: { "@id": ids.organization },
     publisher: { "@id": ids.organization },

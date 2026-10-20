@@ -97,7 +97,7 @@ export function MobileSectionNav() {
                   className={cn(
                     "block rounded-full transition-all duration-300",
                     isActive
-                      ? "h-3 w-3 bg-primary shadow-[0_0_14px_rgba(183,255,42,0.85)]"
+                      ? "h-3 w-3 bg-primary shadow-[0_0_14px_rgba(199,146,180,0.85)]"
                       : "h-2.5 w-2.5 border-[1.5px] border-white/50 bg-transparent",
                   )}
                 />
