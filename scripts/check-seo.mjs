@@ -16,6 +16,9 @@ const ORIGIN = siteSource.match(/\burl:\s*"(https?:\/\/[^"]+)"/)[1];
 const OG_IMAGE = siteSource.match(/\bogImage:\s*"([^"]+)"/)[1];
 const problems = [];
 const warn = (page, msg) => problems.push(`[${page}] ${msg}`);
+// Owner's rule: never state a price anywhere (page text, structured data, llms.txt): Google Play shows it per country.
+// Say "one-time purchase" and "7-day free trial" instead.
+const PRICE = /[€$£¥₹]\s?\d|\d[\d.,]*\s?(€|£|EUR|USD|GBP)\b|\b(EUR|USD|GBP)\s?\d/;
 
 const decode = (s) => s.replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#x27;|&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
 const textOf = (s) => decode(s.replace(/<script[\s\S]*?<\/script>/g, " ").replace(/<style[\s\S]*?<\/style>/g, " ").replace(/<[^>]*>/g, " ")).replace(/\s+/g, " ").trim();
@@ -74,6 +77,11 @@ for (const p of indexable) {
   const robots = metas.filter((t) => attr(t, "name") === "robots").map((t) => attr(t, "content"));
   if (robots.some((r) => /noindex/i.test(r))) warn(label, `noindex present: ${robots}`);
   if (links.some((l) => attr(l, "rel") === "alternate" && attr(l, "hreflang"))) warn(label, "unexpected hreflang alternate");
+
+  // no price anywhere on the page, structured data included
+  const priceHit = textOf(html).match(PRICE) ?? html.match(/"price(Currency)?"\s*:/);
+  if (priceHit) warn(label, `price on the page: "${priceHit[0]}" (say "one-time purchase" and "7-day free trial")`);
+  for (const b of html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)) if (PRICE.test(b[1])) warn(label, "price in JSON-LD");
 
   // headings
   const heads = [...html.matchAll(/<h([1-6])\b[^>]*>([\s\S]*?)<\/h\1>/g)].map((m) => ({ level: +m[1], text: textOf(m[2]) }));
@@ -144,7 +152,6 @@ for (const p of indexable) {
         need(bc.itemListElement[0].item === `${ORIGIN}/`, "breadcrumb starts at home");
       }
     }
-    need(!/[€$£]\s?\d|\d\s?(€|EUR|USD)\b/.test(textOf(html)), "no price in the page text: Google Play sets it per country");
     const app = nodes.find((n) => [].concat(n["@type"]).includes("MobileApplication"));
     if (urlPath === "/") {
       need(app && [].concat(app["@type"]).includes("SoftwareApplication"), "MobileApplication+SoftwareApplication");
@@ -238,6 +245,7 @@ if (/^Host:/im.test(robots)) warn("robots.txt", "Host directive still present");
 const llmsPath = path.join(out, "llms.txt");
 if (!fs.existsSync(llmsPath)) warn("llms.txt", "missing");
 const llms = fs.existsSync(llmsPath) ? fs.readFileSync(llmsPath, "utf8") : "";
+if (PRICE.test(llms)) warn("llms.txt", `price: "${llms.match(PRICE)[0]}"`);
 for (const m of llms.matchAll(/\]\((https:\/\/[^)]*)\)/g)) {
   if (!m[1].startsWith(ORIGIN)) continue; const u = new URL(m[1]).pathname; if (!known.has(u)) warn("llms.txt", `link to missing page ${u}`); }
 const manifest = JSON.parse(fs.readFileSync(path.join(out, "manifest.webmanifest"), "utf8"));
