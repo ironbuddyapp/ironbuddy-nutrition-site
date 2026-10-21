@@ -15,6 +15,11 @@ export type PageDef = {
   /** ISO dates. Bump `modified` whenever the page content changes; the sitemap and JSON-LD read it. */
   published: string;
   modified: string;
+  /**
+   * The search this page targets, from keyword-map.md (owner-approved). `main` must appear in the title, H1, meta
+   * description and first paragraph, and no two pages share it (seo:check). `null`: a navigational page with no target.
+   */
+  keywords: { main: string; supporting: readonly string[] } | null;
   /** Extra image paths to list in the sitemap for image discovery. */
   images?: readonly string[];
 };
@@ -36,6 +41,9 @@ const screenshotImages = [
   "/screenshots/ironbuddy-nutrition-saved-meals.webp",
 ] as const;
 
+/** Keyword map applied: titles, H1s, descriptions and intros name each page's main keyword. */
+const KEYWORD_MAP = "2026-10-21";
+
 export const pages = {
   home: {
     path: "/",
@@ -43,10 +51,11 @@ export const pages = {
     label: "Home",
     title: "IronBuddy: Nutrition Tracker – Offline Calorie Counter",
     description:
-      "Offline calorie and macro tracker for Android: photograph your plate, scan a barcode or weigh it. Honest numbers for people who train. Pay once, no account.",
+      "Offline calorie counter and macro tracker for Android: photograph your plate, scan a barcode or weigh it. Honest numbers for people who train. No account.",
     summary: "The offline calorie and macro tracker: photo, barcode or scale, honest numbers, pay once.",
+    keywords: { main: "offline calorie counter", supporting: ["macro tracker", "barcode scanner", "photo food logging"] },
     published: LAUNCH,
-    modified: LAUNCH,
+    modified: KEYWORD_MAP,
     images: screenshotImages,
   },
   support: {
@@ -57,6 +66,7 @@ export const pages = {
     description:
       "Help for IronBuddy: Nutrition Tracker: restore your purchase, back up and move your data, fix a wrong number, and contact us. Answers in plain words.",
     summary: "Restore a purchase, back up or move your data, and how to reach us.",
+    keywords: null,
     published: LAUNCH,
     modified: LAUNCH,
   },
@@ -68,6 +78,7 @@ export const pages = {
     description:
       "Privacy policy of IronBuddy: Nutrition Tracker. Your meals, weight and photos stay on your phone: no account, no analytics, nothing sent to us.",
     summary: "What the app keeps on your phone, and what it never sends anywhere.",
+    keywords: null,
     published: LAUNCH,
     modified: LENS,
   },

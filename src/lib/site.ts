@@ -23,7 +23,7 @@ export const siteConfig = {
   tagline: "Eat for your goal. Offline, honest, pay once.",
   title: "IronBuddy: Nutrition Tracker – Offline Calorie Counter",
   description:
-    "Offline calorie and macro tracker for Android: photograph your plate, scan a barcode or weigh it. Honest numbers for people who train. Pay once, no account.",
+    "Offline calorie counter and macro tracker for Android: photograph your plate, scan a barcode or weigh it. Honest numbers for people who train. No account.",
   url: "https://nutrition.ironbuddy.fit",
   /** The brand home page. */
   brandUrl: "https://ironbuddy.fit",

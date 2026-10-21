@@ -26,11 +26,11 @@ export function Hero() {
               <span className="sr-only">. </span>
             </span>
             <span className="mt-3 block text-[1.85rem] font-semibold leading-[1.05] tracking-tight text-white lg:mt-6 lg:text-[3.9rem] lg:leading-[1.02]">
-              Calorie counter that works <span className="text-primary-glow">offline.</span>
+              Offline calorie counter for <span className="text-primary-glow">people who train.</span>
             </span>
           </h1>
           <p className="mt-2 text-sm font-semibold tracking-tight text-white/85 sm:text-base lg:mt-3 lg:text-2xl">
-            One camera for your plate, a barcode or a label. Honest numbers, pay once.
+            An offline calorie counter: one camera for your plate, a barcode or a label. Pay once.
           </p>
 
           <ul
