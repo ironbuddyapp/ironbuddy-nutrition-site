@@ -36,6 +36,7 @@ export function GET() {
     "",
     entry(pages.home),
     entry(pages.support),
+    entry(pages.whatsNew),
     entry(pages.privacy),
     "",
   ].join("\n");

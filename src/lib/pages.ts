@@ -27,6 +27,8 @@ export type PageDef = {
 const LAUNCH = "2026-10-18";
 /** The label reader and the optional Google Lens hand-off are described (section 4). */
 const LENS = "2026-10-20";
+/** Version 0.1.6: plate photos kept on the phone, "Say the numbers" microphone, What's New page. */
+const V016 = "2026-10-22";
 
 /** The current screenshot set (appScreenshots in content.ts). */
 const screenshotImages = [
@@ -70,6 +72,22 @@ export const pages = {
     published: LAUNCH,
     modified: LAUNCH,
   },
+  whatsNew: {
+    path: "/whats-new/",
+    kind: "support",
+    label: "What's New",
+    title: "What's New in IronBuddy Nutrition Tracker",
+    description:
+      "What changed in each version of IronBuddy: Nutrition Tracker: the Shot flow one question at a time, named label numbers, Say the numbers and plate photos.",
+    summary: "What changed in each version of the app.",
+    keywords: null,
+    published: V016,
+    modified: V016,
+    images: [
+      "/screenshots/ironbuddy-nutrition-shot-plate-route.webp",
+      "/screenshots/ironbuddy-nutrition-plate-photos-in-meals.webp",
+    ],
+  },
   privacy: {
     path: "/privacy/",
     kind: "legal",
@@ -80,7 +98,7 @@ export const pages = {
     summary: "What the app keeps on your phone, and what it never sends anywhere.",
     keywords: null,
     published: LAUNCH,
-    modified: LENS,
+    modified: V016,
   },
 } as const satisfies Record<string, PageDef>;
 

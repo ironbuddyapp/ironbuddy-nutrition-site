@@ -105,6 +105,14 @@ export default function PrivacyPage() {
               us. The only exception is one you choose: if you tap &quot;Read with Google Lens&quot;, that one label
               photo is handed to Google&apos;s app (section 4).
             </li>
+            <li>
+              One small copy of a plate photo you log from Shot is kept with that meal, on your phone only: it is never
+              uploaded, never added to your gallery and not in any backup, and it is deleted with the meal (section 4).
+            </li>
+            <li>
+              &quot;Say the numbers&quot; uses the microphone only when you tap it, with Android&apos;s own on-device
+              speech recogniser. The audio and the words stay on your phone (section 4).
+            </li>
             <li>The App has no ads, no analytics and no crash-reporting service. We do not sell or share data.</li>
             <li>
               The food database, the barcode list and the food recognition model are built into the App, so looking
@@ -178,12 +186,25 @@ export default function PrivacyPage() {
               or to read the numbers on a nutrition label.
             </li>
             <li>
-              It is shown on screen while you confirm the meal, then discarded. The App never adds it to your gallery
-              and never sends it to us. If you use Google Lens (below), the App keeps that one label photo as a
-              temporary file in its private storage so Google&apos;s app can open it, and deletes it when you come back.
+              It is shown on screen while you confirm the meal. A barcode photo or a nutrition label photo is then
+              discarded. The App never adds any photo to your gallery and never sends one to us. If you use Google Lens
+              (below), the App keeps that one label photo as a temporary file in its private storage so Google&apos;s
+              app can open it, and deletes it when you come back.
             </li>
-            <li>The App does not use the camera in the background and does not record video or sound.</li>
+            <li>
+              <Strong>Plate photos are the one exception.</Strong> When you log a plate from Shot, the App keeps a small
+              copy of the photo (480 px) with that meal, so you can see it on Today, in the meal&apos;s details and in
+              My meals. The copy stays in the App&apos;s private storage on your phone only: it is never uploaded, never
+              added to your gallery, not part of any backup, and it is deleted when you delete the meal.
+            </li>
+            <li>The App does not use the camera in the background and does not record video.</li>
           </BulletList>
+          <p>
+            <Strong>Say the numbers (microphone).</Strong> On the nutrition-label form you can tap &quot;Say the
+            numbers&quot; and tell the App the calories and macros. It listens only while you have tapped it, using
+            Android&apos;s own speech recogniser on your phone (English). The audio and the words stay on your phone;
+            nothing is sent to us or collected, and the App does not record or keep the sound.
+          </p>
           <p>
             <Strong>Google Lens (optional).</Strong> On Android, the nutrition-label form offers &quot;Read with Google
             Lens&quot; for labels the App&apos;s own reader cannot manage. Only if you tap it, the App hands the label
@@ -262,7 +283,8 @@ export default function PrivacyPage() {
             <li>contain advertising, analytics or crash-reporting code;</li>
             <li>sell, rent or share personal data;</li>
             <li>
-              access your location, contacts, microphone or other apps&apos; data, except two things for Google Lens:
+              access your location, contacts or other apps&apos; data, or use the microphone except when you tap
+              &quot;Say the numbers&quot; (section 4), apart from two things for Google Lens:
               checking whether Google&apos;s app is installed, and reading the text you copied in Lens, once, when you
               come back, or text you choose to share to the App (section 4);
             </li>
@@ -327,6 +349,10 @@ export default function PrivacyPage() {
               <Strong>Camera:</Strong> only when you tap to photograph a plate, a barcode or a nutrition label (section 4).
             </li>
             <li>
+              <Strong>Microphone:</Strong> only while you tap &quot;Say the numbers&quot;, to recognise the calories and
+              macros you say, on your phone with Android&apos;s own speech recogniser (section 4).
+            </li>
+            <li>
               <Strong>Internet:</Strong> needed by Google Play for the purchase, the review prompt and update notices,
               and to open links in your browser. It is not used to upload your data.
             </li>
@@ -355,6 +381,9 @@ export default function PrivacyPage() {
           <BulletList>
             <li>
               <Strong>In the App:</Strong> Settings → Reset all data erases everything the App stores on your phone.
+            </li>
+            <li>
+              <Strong>Plate photos:</Strong> deleting a meal deletes its photo copy too.
             </li>
             <li>
               <Strong>Uninstall:</Strong> removes the App and its private storage.

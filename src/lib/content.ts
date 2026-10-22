@@ -218,7 +218,7 @@ export const homeFaqs: Faq[] = [
     id: "data",
     question: "Where are my meals stored?",
     answer:
-      "On your phone only. We never receive them: there is no server, no account and no analytics in the app. Android can back them up to your own Google account if you turn that on, and the full version keeps a backup file in your Download folder.",
+      "On your phone only. We never receive them: there is no server, no account and no analytics in the app. Android can back them up to your own Google account if you turn that on, and the full version keeps a backup file in your Download folder. A small copy of a plate photo is kept with its meal on your phone only: it is never uploaded and is not in any backup.",
   },
   {
     id: "training",
@@ -259,6 +259,7 @@ export const footerGroups = [
     title: "Help",
     links: [
       { label: pages.support.label, href: pages.support.path },
+      { label: pages.whatsNew.label, href: pages.whatsNew.path },
       { label: pages.privacy.label, href: pages.privacy.path },
     ],
   },
