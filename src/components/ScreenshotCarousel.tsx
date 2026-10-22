@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AppScreen, PhoneMockup } from "@/components/PhoneMockup";
 import { Icon } from "@/components/icons";
-import { appScreenshots as screenshots } from "@/lib/content";
+import { appScreenshots as screenshots, photoCredit } from "@/lib/content";
 import { cn } from "@/lib/cn";
 
 export function ScreenshotCarousel() {
@@ -60,6 +60,9 @@ export function ScreenshotCarousel() {
             </PhoneMockup>
             <figcaption className="mt-2 text-center text-sm font-medium text-white lg:mt-5">
               {shot.label}
+              {"credit" in shot && (
+                <span className="mt-1 block text-[10px] font-normal leading-tight text-muted">{photoCredit}</span>
+              )}
             </figcaption>
           </figure>
         ))}

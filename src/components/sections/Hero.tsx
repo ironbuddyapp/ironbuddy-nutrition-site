@@ -3,7 +3,7 @@ import { Container } from "@/components/Container";
 import { ExploreIronBuddyButton } from "@/components/ExploreIronBuddyButton";
 import { GooglePlayButton } from "@/components/GooglePlayButton";
 import { Icon } from "@/components/icons";
-import { heroBullets, heroHighlights, screenshotSrc } from "@/lib/content";
+import { heroBullets, heroHighlights, photoCredit, screenshotSrc } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 import { preload } from "react-dom";
 
@@ -78,12 +78,13 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative flex min-h-0 items-center justify-center animate-fade-up max-lg:order-1">
+        <div className="relative flex min-h-0 flex-col items-center justify-center animate-fade-up max-lg:order-1">
           <div className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/12 blur-3xl" />
           {/* Width also shrinks on short screens (100svh minus header, install bar and text block) so the phone is never clipped. */}
           <PhoneMockup float className="relative max-lg:w-[min(200px,calc((100svh_-_25rem)_*_0.4615))]">
             <AppScreen id="today" priority />
           </PhoneMockup>
+          <p className="relative mt-2 text-center text-[10px] leading-tight text-muted">{photoCredit}</p>
         </div>
       </Container>
     </section>

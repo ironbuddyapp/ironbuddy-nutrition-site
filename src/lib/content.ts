@@ -75,19 +75,21 @@ export const features: Array<{ title: string; description: string; icon: Feature
 ];
 
 /**
- * App screenshots in public/screenshots/ (WebP, 720 × 1560, recorded 20 October 2026 with sample data in the app's default
+ * App screenshots in public/screenshots/ (WebP, 720 × 1560, recorded 20 October 2026 (Today, the plate photo and My meals again on 22 October, app 0.1.6) with sample data in the app's default
  * dark Fig look, by the app repo's scripts/store/capture-site.mjs). `carousel: true`
- * marks the current set: it drives the home page carousel, the structured data and the image sitemap.
+ * marks the current set: it drives the home page carousel, the structured data and the image sitemap. `credit: true` marks a
+ * screen that shows a sample plate photo from the Nutrition5k dataset (CC BY 4.0): the site shows `photoCredit` under it.
  */
 export const screenshots = [
   {
     id: "today",
     file: "ironbuddy-nutrition-today-calories-protein.webp",
     label: "Today",
-    alt: "IronBuddy Nutrition calorie counter Today screen: 391 kcal left of 2,040, 35g of protein to go, meals each marked Exact or Estimate",
+    alt: "IronBuddy Nutrition calorie counter Today screen: 391 kcal left of 2,040, 35g of protein to go, meals each marked Exact or Estimate, a plate photo next to the meal it was logged from",
     width: 720,
     height: 1560,
     carousel: true,
+    credit: true,
   },
   {
     id: "camera",
@@ -102,10 +104,11 @@ export const screenshots = [
     id: "photo",
     file: "ironbuddy-nutrition-photo-portion-oil.webp",
     label: "Photo of Your Plate",
-    alt: "Photo food logging: baked salmon from the plate photo, normal portion of about 150g, olive oil picked as an extra",
+    alt: "Photo food logging, the last step of Shot: your dinner from the plate photo, boiled broccoli 80g and a tablespoon of olive oil, about 147 kcal as an Estimate, checked before it is logged",
     width: 720,
     height: 1560,
     carousel: true,
+    credit: true,
   },
   {
     id: "barcode",
@@ -156,12 +159,16 @@ export const screenshots = [
     id: "meals",
     file: "ironbuddy-nutrition-saved-meals.webp",
     label: "My Meals",
-    alt: "My meals: saved meals logged again in two taps, oats with milk and banana, Greek yogurt with honey, all Exact",
+    alt: "My meals as cards: saved meals logged again in two taps, oats with milk and banana, Greek yogurt with honey, chicken, rice and broccoli with its plate photo, all Exact",
     width: 720,
     height: 1560,
     carousel: true,
+    credit: true,
   },
 ] as const;
+
+/** Credit for the sample plate photos in the screenshots marked `credit: true`. */
+export const photoCredit = "Sample photos: Nutrition5k dataset, Google Research, CC BY 4.0";
 
 /** The current screenshot set (see above). */
 export const appScreenshots = screenshots.filter((shot) => shot.carousel);
