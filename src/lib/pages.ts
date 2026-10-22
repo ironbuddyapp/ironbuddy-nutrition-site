@@ -57,7 +57,7 @@ export const pages = {
     summary: "The offline calorie and macro tracker: photo, barcode or scale, honest numbers, pay once.",
     keywords: { main: "offline calorie counter", supporting: ["macro tracker", "barcode scanner", "photo food logging"] },
     published: LAUNCH,
-    modified: KEYWORD_MAP,
+    modified: V016,
     images: screenshotImages,
   },
   support: {
