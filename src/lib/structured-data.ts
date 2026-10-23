@@ -72,12 +72,13 @@ function websiteNode(): JsonLdNode {
 
 /** Every entry maps to something the app or its privacy policy states. Do not add features that are not shipped. */
 export const appFeatureList = [
-  "Photo food logging: the dish is recognised on the phone, offline, from about 2,000 dishes",
+  "Photo food logging: the dish is recognised on the phone, offline, from about 2,000 dishes, drinks included (coffees by name)",
   "Barcode scanner with about a million packaged products bundled in the app",
   "Food search of about 12,000 foods and dishes (USDA, FNDDS, CIQUAL), Greek names included",
   "Exact or Estimate on every number, with a range for estimates",
   "Daily calorie target and protein, carbs and fat for your goal, including lose fat and build muscle",
   "Weekly check-in: real maintenance from your logs and weight, with a suggested new target",
+  "Build a meal from foods and grams, or cook a batch and weigh your plate from the pot, then save it to My meals",
   "What can I still eat: saved meals that fit what is left today",
   "Read a nutrition label by camera, on the phone",
   "Body weight trend",

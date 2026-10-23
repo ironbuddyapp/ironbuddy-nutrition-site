@@ -32,6 +32,53 @@ export default function WhatsNewPage() {
       />
 
       <PageBody>
+        <ContentSection id="v0-1-8" title="Version 0.1.8 (23 October 2026)">
+          <BulletList>
+            <li>
+              <Strong>Coffees by name:</Strong> Shot names a freddo espresso, freddo cappuccino, frapp&eacute;, Greek
+              coffee, espresso, cappuccino or latte as that drink, and the drink keeps its name in the list and in the
+              logged meal.
+            </li>
+            <li>
+              <Strong>Drinks start at a real amount:</Strong> a protein shake is one scoop, coffee, tea and juice a cup
+              or glass, beer and cola a bottle, wine a glass. Grams typed from a scale are still Exact; a size guess is
+              an Estimate.
+            </li>
+          </BulletList>
+        </ContentSection>
+
+        <ContentSection id="v0-1-7" title="Version 0.1.7 (22 October 2026)">
+          <BulletList>
+            <li>
+              <Strong>Build a meal:</Strong> in My meals, pick foods from the list, set the grams of each and see the
+              whole meal&apos;s calories and macros added up. Save it, log it again in two taps, and change its foods
+              or amounts later. Exact when every food is weighed, otherwise an Estimate with a range.
+            </li>
+            <li>
+              <Strong>Batch cooking:</Strong> the first question is One meal or A batch (a pot eaten over several
+              days). Say how many portions the pot makes and one portion logs as an Estimate; weigh the cooked pot, then
+              your plate, for Exact numbers.
+            </li>
+            <li>
+              <Strong>A clearer saved-meal sheet:</Strong> the numbers first, then how much and which meal. A batch
+              picks Portions or Weigh my plate.
+            </li>
+          </BulletList>
+          <figure>
+            <img
+              src="/screenshots/ironbuddy-nutrition-build-a-meal.webp"
+              width={1600}
+              height={844}
+              loading="lazy"
+              alt="Build a meal in four screens: One meal or A batch, a meal added up to 356 kcal and Exact, a 450 g plate from a chicken and rice batch at 527 kcal and Exact, and the saved-meal sheet"
+              className="w-full rounded-2xl border border-white/8"
+            />
+            <figcaption className="mt-2 text-sm text-muted">
+              Build a meal or a batch, then log it in two taps.
+            </figcaption>
+          </figure>
+        </ContentSection>
+
         <ContentSection id="v0-1-6" title="Version 0.1.6 (22 October 2026)">
           <BulletList>
             <li>

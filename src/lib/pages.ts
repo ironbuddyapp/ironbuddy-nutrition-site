@@ -29,6 +29,8 @@ const LAUNCH = "2026-10-18";
 const LENS = "2026-10-20";
 /** Version 0.1.6: plate photos kept on the phone, "Say the numbers" microphone, What's New page. */
 const V016 = "2026-10-22";
+/** Version 0.1.8: coffees by name, drinks at a real amount (0.1.7: Build a meal and batch cooking). */
+const V018 = "2026-10-23";
 
 /** The current screenshot set (appScreenshots in content.ts). */
 const screenshotImages = [
@@ -57,7 +59,7 @@ export const pages = {
     summary: "The offline calorie and macro tracker: photo, barcode or scale, honest numbers, pay once.",
     keywords: { main: "offline calorie counter", supporting: ["macro tracker", "barcode scanner", "photo food logging"] },
     published: LAUNCH,
-    modified: V016,
+    modified: V018,
     images: screenshotImages,
   },
   support: {
@@ -78,12 +80,13 @@ export const pages = {
     label: "What's New",
     title: "What's New in IronBuddy Nutrition Tracker",
     description:
-      "What changed in each version of IronBuddy: Nutrition Tracker: the Shot flow one question at a time, named label numbers, Say the numbers and plate photos.",
+      "What changed in each version of IronBuddy: Nutrition Tracker: coffees by name, Build a meal and batch cooking, plate photos and Say the numbers.",
     summary: "What changed in each version of the app.",
     keywords: null,
     published: V016,
-    modified: V016,
+    modified: V018,
     images: [
+      "/screenshots/ironbuddy-nutrition-build-a-meal.webp",
       "/screenshots/ironbuddy-nutrition-shot-plate-route.webp",
       "/screenshots/ironbuddy-nutrition-plate-photos-in-meals.webp",
     ],
