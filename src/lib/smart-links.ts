@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site";
  * to the right store and tags the visit. The same links exist on workout.ironbuddy.fit for the workout app.
  *
  * While siteConfig.playListingLive is false, /get, /get-fb, /get-ig and /soon-iphone all show one neutral
- * "IronBuddy is coming soon" page to every visitor: no Play link, no feature claims, no dates, no scripts.
+ * "IronBuddy: Nutrition Tracker is coming soon" page to every visitor: no Play link, no feature claims, no dates, no scripts.
  * When it is set to true they switch on their own:
  *   Android         → the tagged Google Play URL for the source below.
  *   iPhone and iPad → /soon-iphone/ (no iOS app yet).
@@ -93,7 +93,7 @@ function html(markup: string) {
 
 /** Every smart link (and /soon-iphone) until the Play listing is public. */
 function comingSoonPage() {
-  return html(page({ title: siteConfig.name, body: "<h1>IronBuddy is coming soon.</h1>" }));
+  return html(page({ title: siteConfig.fullName, body: `<h1>${escapeHtml(siteConfig.fullName)} is coming soon.</h1>` }));
 }
 
 /** /get, /get-fb, /get-ig. */
@@ -115,7 +115,7 @@ export function smartLinkPage(name: SmartLinkName) {
 <p class="opening">Opening Google Play&hellip; <a href="${escapeHtml(target)}">Tap here if nothing happens</a></p>
 <div class="store">
 <a class="badge" href="${escapeHtml(target)}"><img src="/badges/google-play-badge.svg" alt="Get it on Google Play" width="180" height="53"></a>
-<p>IronBuddy is coming to iPhone.</p>
+<p>${escapeHtml(siteConfig.fullName)} is coming to iPhone.</p>
 </div>`;
   // Android: count, then leave (the same timings as the workout site's /play). Others: count a click on the badge
   // (count.js sends with sendBeacon, so the click is recorded as the link leaves the page).
@@ -137,7 +137,7 @@ export function smartLinkPage(name: SmartLinkName) {
 export function soonIphonePage() {
   if (!siteConfig.playListingLive) return comingSoonPage();
   const targets = Object.fromEntries(Object.entries(smartLinks).map(([name, link]) => [name, playUrl(link.utm)]));
-  const body = `<h1>IronBuddy is coming to iPhone.</h1>
+  const body = `<h1>${escapeHtml(siteConfig.fullName)} is coming to iPhone.</h1>
 <p>An iOS version is on our roadmap, and we&rsquo;ll share news about availability as soon as we can.</p>
 <p>On Android? Get ${escapeHtml(siteConfig.fullName)} on Google Play.</p>
 <a class="badge" href="${escapeHtml(siteConfig.playStoreLinkUrl)}"><img src="/badges/google-play-badge.svg" alt="Get it on Google Play" width="180" height="53"></a>`;
@@ -147,5 +147,5 @@ export function soonIphonePage() {
   if (from && Object.prototype.hasOwnProperty.call(targets, from)) document.querySelector(".badge").href = targets[from];
   else from = null;
   count({ event: true, path: ${js(soonEvent)}, title: "Soon on iPhone (Nutrition)" + (from ? " (/" + from + ")" : "") });`;
-  return html(page({ title: `${siteConfig.name} on iPhone`, body, script }));
+  return html(page({ title: `${siteConfig.fullName} on iPhone`, body, script }));
 }
