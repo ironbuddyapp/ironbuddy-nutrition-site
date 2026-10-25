@@ -32,7 +32,46 @@ export default function WhatsNewPage() {
       />
 
       <PageBody>
-        <ContentSection id="v0-1-8" title="Version 0.1.8 (23 October 2026)">
+        <ContentSection id="v0-1-9" title="Version 0.1.9 (24 October 2026)">
+          <BulletList>
+            <li>
+              <Strong>A plate is one card on Today:</Strong> a plate logged from one Shot photo shows as one card. Tap it
+              to see each food, add one you forgot, move the plate to another meal, save it to My meals or delete it.
+            </li>
+            <li>
+              <Strong>One-tap swaps for look-alike foods:</Strong> in Shot, swap a food for its look-alike in one tap
+              (white, wholemeal, multigrain or rye toast; ham, turkey or chicken slices; egg, cheese and yogurt kinds).
+            </li>
+            <li>
+              <Strong>Say or type what&apos;s on the plate:</Strong> speech is recognised on the phone (English,
+              offline); nothing leaves the phone.
+            </li>
+            <li>
+              <Strong>Extras by the spoon:</Strong> butter, oil and other extras are counted with &minus; / + in
+              teaspoons and tablespoons together (0 to 10 of each), for example 1 tsp in the pan plus 2 tbsp on the
+              bread.
+            </li>
+            <li>
+              <Strong>Macro gauges on Today:</Strong> the calories card shows protein, carbs and fat as three gauges,
+              the default for everyone. The full version can pick another look in Settings &rarr; Appearance &rarr;
+              Macros on Today: Gauges, Rings, Bars, Tiles or Big numbers.
+            </li>
+          </BulletList>
+          <p>Every calorie number still says Exact or Estimate.</p>
+          <figure>
+            <img
+              src="/screenshots/ironbuddy-nutrition-today-macro-gauges.webp"
+              width={720}
+              height={1560}
+              loading="lazy"
+              alt="Today screen: 660 kcal left with an estimate range, protein, carbs and fat as three gauges with the grams to go, and today's meals marked Exact or Estimate"
+              className="w-full max-w-xs rounded-2xl border border-white/8"
+            />
+            <figcaption className="mt-2 text-sm text-muted">Protein, carbs and fat as gauges on Today.</figcaption>
+          </figure>
+        </ContentSection>
+
+        <ContentSection id="v0-1-8"title="Version 0.1.8 (23 October 2026)">
           <BulletList>
             <li>
               <Strong>Coffees by name:</Strong> Shot names a freddo espresso, freddo cappuccino, frapp&eacute;, Greek

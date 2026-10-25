@@ -83,13 +83,13 @@ export const features: Array<{ title: string; description: string; icon: Feature
 export const screenshots = [
   {
     id: "today",
-    file: "ironbuddy-nutrition-today-calories-protein.webp",
+    file: "ironbuddy-nutrition-today-macro-gauges.webp",
     label: "Today",
-    alt: "IronBuddy Nutrition calorie counter Today screen: 391 kcal left of 2,040, 35g of protein to go, meals each marked Exact or Estimate, a plate photo next to each meal it was logged from",
+    alt: "IronBuddy Nutrition calorie counter Today screen: 660 kcal left of a 2,040 target with an estimate range, protein, carbs and fat as three gauges with the grams to go, and today's meals each marked Exact or Estimate",
     width: 720,
     height: 1560,
     carousel: true,
-    credit: true,
+    credit: false,
   },
   {
     id: "camera",
@@ -173,7 +173,7 @@ export const photoCredit = "Sample photos: Nutrition5k dataset, Google Research,
 /** The current screenshot set (see above). */
 export const appScreenshots = screenshots.filter((shot) => shot.carousel);
 
-/** Public path of a screenshot, e.g. "/screenshots/ironbuddy-nutrition-today-calories-protein.webp". */
+/** Public path of a screenshot, e.g. "/screenshots/ironbuddy-nutrition-today-macro-gauges.webp". */
 export function screenshotSrc(id: ScreenshotId) {
   const shot = screenshots.find((item) => item.id === id);
   if (!shot) throw new Error(`Unknown screenshot: ${id}`);
@@ -202,7 +202,7 @@ export const homeFaqs: Faq[] = [
     id: "photo",
     question: "How does the photo work out the calories?",
     answer:
-      "The photo only names the dish: a model on your phone suggests it and you confirm. The calories are that dish's values times the portion you pick, plus any extra oil. It is always an Estimate with a range; weigh the plate once and it's Exact next time.",
+      "The photo only names the dish: a model on your phone suggests it and you confirm. The calories are that dish's values times the portion you pick, plus any extras such as oil or butter, counted by the spoon (teaspoons and tablespoons). It is always an Estimate with a range; weigh the plate once and it's Exact next time.",
   },
   {
     id: "offline",

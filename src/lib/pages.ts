@@ -31,10 +31,12 @@ const LENS = "2026-10-20";
 const V016 = "2026-10-22";
 /** Version 0.1.8: coffees by name, drinks at a real amount (0.1.7: Build a meal and batch cooking). */
 const V018 = "2026-10-23";
+/** Version 0.1.9: a plate as one card on Today, look-alike swaps, say or type the plate, extras by the spoon, macro gauges. */
+const V019 = "2026-10-25";
 
 /** The current screenshot set (appScreenshots in content.ts). */
 const screenshotImages = [
-  "/screenshots/ironbuddy-nutrition-today-calories-protein.webp",
+  "/screenshots/ironbuddy-nutrition-today-macro-gauges.webp",
   "/screenshots/ironbuddy-nutrition-one-camera.webp",
   "/screenshots/ironbuddy-nutrition-photo-portion-oil.webp",
   "/screenshots/ironbuddy-nutrition-barcode-scanner.webp",
@@ -59,7 +61,7 @@ export const pages = {
     summary: "The offline calorie and macro tracker: photo, barcode or scale, honest numbers, pay once.",
     keywords: { main: "offline calorie counter", supporting: ["macro tracker", "barcode scanner", "photo food logging"] },
     published: LAUNCH,
-    modified: V018,
+    modified: V019,
     images: screenshotImages,
   },
   support: {
@@ -80,11 +82,11 @@ export const pages = {
     label: "What's New",
     title: "What's New in IronBuddy Nutrition Tracker",
     description:
-      "What changed in each version of IronBuddy: Nutrition Tracker: coffees by name, Build a meal and batch cooking, plate photos and Say the numbers.",
+      "What changed in each version of IronBuddy: Nutrition Tracker: a plate as one card, look-alike swaps, butter and oil by the spoon, macro gauges and more.",
     summary: "What changed in each version of the app.",
     keywords: null,
     published: V016,
-    modified: V018,
+    modified: V019,
     images: [
       "/screenshots/ironbuddy-nutrition-build-a-meal.webp",
       "/screenshots/ironbuddy-nutrition-shot-plate-route.webp",

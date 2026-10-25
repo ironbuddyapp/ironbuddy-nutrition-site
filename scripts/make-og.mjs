@@ -7,7 +7,7 @@ import path from "node:path";
 const root = path.resolve(".");
 const b64 = (p) => readFileSync(path.join(root, p)).toString("base64");
 const logo = `data:image/png;base64,${b64("public/logo-mark.png")}`;
-const shot = `data:image/webp;base64,${b64("public/screenshots/ironbuddy-nutrition-today-calories-protein.webp")}`;
+const shot = `data:image/webp;base64,${b64("public/screenshots/ironbuddy-nutrition-today-macro-gauges.webp")}`;
 const font = `data:font/woff2;base64,${b64("public/fonts/space-grotesk/latin.woff2")}`;
 
 const html = `<!doctype html><html><head><style>
