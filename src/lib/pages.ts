@@ -33,6 +33,8 @@ const V016 = "2026-10-22";
 const V018 = "2026-10-23";
 /** Version 0.1.9: a plate as one card on Today, look-alike swaps, say or type the plate, extras by the spoon, macro gauges. */
 const V019 = "2026-10-25";
+/** Version 0.1.10: Settings with the Workout Tracker's groups and row names, Body Tracking and Main Concept rows. */
+const V0110 = "2026-10-28";
 
 /** The current screenshot set (appScreenshots in content.ts). */
 const screenshotImages = [
@@ -86,7 +88,7 @@ export const pages = {
     summary: "What changed in each version of the app.",
     keywords: null,
     published: V016,
-    modified: V019,
+    modified: V0110,
     images: [
       "/screenshots/ironbuddy-nutrition-build-a-meal.webp",
       "/screenshots/ironbuddy-nutrition-shot-plate-route.webp",

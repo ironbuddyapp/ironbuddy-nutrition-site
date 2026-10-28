@@ -32,6 +32,26 @@ export default function WhatsNewPage() {
       />
 
       <PageBody>
+        <ContentSection id="v0-1-10" title="Version 0.1.10 (28 October 2026)">
+          <BulletList>
+            <li>
+              <Strong>Settings like the Workout Tracker:</Strong> Settings now looks like IronBuddy: Workout
+              Tracker&apos;s, with the same groups and row names.
+            </li>
+            <li>
+              <Strong>Backup rows under Data:</Strong> Export a copy, Import a backup file and Undo last import are their
+              own rows under Data again.
+            </li>
+            <li>
+              <Strong>New in Settings:</Strong> Body Tracking takes you to your weight, and Main Concept replays the
+              intro.
+            </li>
+            <li>
+              <Strong>iPhone only:</Strong> after a reinstall, the first screen offers to bring back the iCloud copy.
+            </li>
+          </BulletList>
+        </ContentSection>
+
         <ContentSection id="v0-1-9" title="Version 0.1.9 (24 October 2026)">
           <BulletList>
             <li>
