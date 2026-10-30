@@ -84,7 +84,7 @@ export function Hero() {
           <PhoneMockup float className="relative max-lg:w-[min(200px,calc((100svh_-_29.5rem)_*_0.4615))]">
             <AppScreen id="today" priority />
           </PhoneMockup>
-          <p className="relative mt-2 text-center text-[10px] leading-tight text-muted">{photoCredit}</p>
+          <p className="relative mt-2 text-balance text-center text-[11px] leading-tight text-muted">{photoCredit}</p>
         </div>
       </Container>
     </section>
