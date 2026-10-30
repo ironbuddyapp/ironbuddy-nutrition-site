@@ -28,7 +28,7 @@ export function PageHero({
     <header className="relative overflow-hidden">
       <div className="pointer-events-none absolute -left-24 -top-16 h-72 w-72 rounded-full bg-primary/8 blur-3xl" />
       <Container className="relative pb-10 pt-4 sm:pb-14 sm:pt-8">
-        <div className={cn("mx-auto", wide ? "max-w-5xl" : "max-w-3xl")}>
+        <div className={cn("mx-auto", wide ? "max-w-5xl" : "max-w-[37rem]")}>
           <Breadcrumbs trail={trail} />
           <p className="mt-6 text-xs font-semibold uppercase tracking-[0.22em] text-primary sm:mt-8">
             {eyebrow}
