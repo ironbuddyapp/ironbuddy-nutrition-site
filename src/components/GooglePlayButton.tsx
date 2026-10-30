@@ -39,10 +39,14 @@ export function GooglePlayButton({
   );
 
   // Before launch the badge is shown but is not a link, so nobody lands on Play's "not found" page.
+  // A visible "Coming soon" line sits under it so it never looks like a button that does nothing.
   if (!siteConfig.playListingLive) {
     return (
-      <span className={cn("inline-flex items-center justify-center rounded-[13px]", size, className)}>
-        {badge("IronBuddy on Google Play, coming soon")}
+      <span className={cn("inline-flex flex-col items-center", className)}>
+        <span className={cn("inline-flex items-center justify-center rounded-[13px]", size)}>
+          {badge("IronBuddy on Google Play, coming soon")}
+        </span>
+        <span className="mt-0.5 text-xs leading-4 text-muted">Coming soon</span>
       </span>
     );
   }
