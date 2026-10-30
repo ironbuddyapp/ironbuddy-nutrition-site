@@ -4,14 +4,12 @@ import { siteConfig } from "@/lib/site";
 export const heroBullets = [
   "Plate, Barcode or Label",
   "Works Offline",
-  "One-Time Purchase",
   "No Account, No Ads",
   "Exact or Estimate, Always Shown",
-  "Free Trial Included",
 ] as const;
 
 /** Compact benefit line shown under the hero headline on small screens. */
-export const heroHighlights = ["Offline", "No ads", "No account", "Free trial"] as const;
+export const heroHighlights = ["Offline", "No account, no ads", "Free trial"] as const;
 
 export type FeatureIcon =
   | "camera"

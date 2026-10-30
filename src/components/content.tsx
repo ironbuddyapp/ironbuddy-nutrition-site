@@ -41,11 +41,11 @@ export function TextLink({
   );
 }
 
-/** Reading-width column used by every content page below the hero. */
+/** Reading-width column used by every content page below the hero: about 70 characters a line at 16 px. */
 export function PageBody({ children }: { children: React.ReactNode }) {
   return (
     <Container>
-      <div className="mx-auto max-w-3xl space-y-12 pb-20 sm:space-y-14 sm:pb-24">{children}</div>
+      <div className="mx-auto max-w-[37rem] space-y-12 pb-20 sm:space-y-14 sm:pb-24">{children}</div>
     </Container>
   );
 }

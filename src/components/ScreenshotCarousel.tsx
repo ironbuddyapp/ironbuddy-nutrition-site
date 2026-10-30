@@ -61,7 +61,7 @@ export function ScreenshotCarousel() {
             <figcaption className="mt-2 text-center text-sm font-medium text-white lg:mt-5">
               {shot.label}
               {"credit" in shot && (
-                <span className="mt-1 block text-[10px] font-normal leading-tight text-muted">{photoCredit}</span>
+                <span className="mt-1 block text-[11px] font-normal leading-tight text-muted">{photoCredit}</span>
               )}
             </figcaption>
           </figure>
