@@ -1,0 +1,24 @@
+# IronBuddy: Nutrition Tracker
+
+> IronBuddy: Nutrition Tracker is an offline calorie and macro tracker for Android, made for people who train. Meals are logged three ways: a photo of the plate (the dish is recognised on the phone and the user picks the portion and any extra oil), a barcode (about a million packaged products are built into the app), or the food search with grams from a kitchen scale (about 12,000 foods and dishes from USDA, FNDDS and CIQUAL). Every number is marked Exact (measured) or Estimate (with a range). It sets a daily calorie and protein target for goals including lose fat, build muscle, and a weekly check-in suggests a new target from the user's own logs and weigh-ins. There is no account, no ads and no analytics; data stays on the phone. Free to download with a 7-day free trial, then a one-time purchase through Google Play (Google Play shows the price for each country).
+
+Key facts:
+
+- Platform: Android, on Google Play. Not available on iPhone yet.
+- Android package: com.ironbuddy.nutrition
+- Google Play: coming soon
+- Works offline: yes (food search, barcodes and photo recognition need no connection)
+- Account required: no
+- Ads: none. Analytics: none
+- Subscription: none
+- Free trial: The 7-day free trial includes everything: photo logging, barcodes, the food search, your plan, Today, My meals, weight and the weekly check-in. Buying the app once keeps everything unlocked after the trial, and adds the backup file, export and import of your data, share cards, the export for a coach, a customizable Today and accent colours. If you don't buy, the app becomes read-only when the trial ends: nothing is deleted and your meals stay visible, but logging and editing need the purchase.
+- Price: a one-time purchase after the 7-day free trial; Google Play shows the amount for each country
+- Developer: IronBuddy, also makers of IronBuddy: Workout Tracker (https://workout.ironbuddy.fit)
+- Contact: iron.buddy.app@gmail.com
+
+## Pages
+
+- [Home](https://nutrition.ironbuddy.fit/): The offline calorie and macro tracker: photo, barcode or scale, honest numbers, pay once.
+- [Support](https://nutrition.ironbuddy.fit/support/): Restore a purchase, back up or move your data, and how to reach us.
+- [What's New](https://nutrition.ironbuddy.fit/whats-new/): What changed in each version of the app.
+- [Privacy Policy](https://nutrition.ironbuddy.fit/privacy/): What the app keeps on your phone, and what it never sends anywhere.
