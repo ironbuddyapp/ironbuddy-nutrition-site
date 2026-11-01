@@ -90,7 +90,15 @@ h3 {
 }
 
 .animate-fade-up {
-  animation: fade-up 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.press {
+  transition-property: transform, background-color, border-color, color, opacity;
+}
+
+.press:active {
+  transform: scale(0.97);
 }
 
 .animate-float {
@@ -110,7 +118,7 @@ h3 {
 }
 
 .reveal {
-  animation: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @supports (animation-timeline: view()) {
