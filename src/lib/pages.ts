@@ -35,6 +35,8 @@ const V018 = "2026-10-23";
 const V019 = "2026-10-25";
 /** Version 0.1.10: Settings with the Workout Tracker's groups and row names, Body Tracking and Main Concept rows. */
 const V0110 = "2026-10-28";
+/** Privacy policy: the weigh-in reminder notification and the Android backup sentence corrected (HQ job J-20261108-1). */
+const PRIVACY_CORRECTED = "2026-11-08";
 
 /** The current screenshot set (appScreenshots in content.ts). */
 const screenshotImages = [
@@ -105,7 +107,7 @@ export const pages = {
     summary: "What the app keeps on your phone, and what it never sends anywhere.",
     keywords: null,
     published: LAUNCH,
-    modified: V016,
+    modified: PRIVACY_CORRECTED,
   },
 } as const satisfies Record<string, PageDef>;
 

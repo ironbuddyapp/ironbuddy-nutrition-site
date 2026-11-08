@@ -115,6 +115,10 @@ export default function PrivacyPage() {
             </li>
             <li>The App has no ads, no analytics and no crash-reporting service. We do not sell or share data.</li>
             <li>
+              A weekly weigh-in reminder is off until you switch it on. It is a notification made on your phone
+              (section 11).
+            </li>
+            <li>
               The food database, the barcode list and the food recognition model are built into the App, so looking
               food up never goes online.
             </li>
@@ -229,7 +233,8 @@ export default function PrivacyPage() {
             To get back from Lens with one tap, the App can show a notification while Lens is open (&quot;Copied the
             table? Tap to go back&quot;). On Android 13 and later it asks for permission to show it the first time you
             open Lens from the App; you can say no and press Back instead. The notification is created on your phone,
-            holds none of your data, and is removed when you return. The App shows no other notifications. You can also
+            holds none of your data, and is removed when you return. The only other notification is the weekly weigh-in
+            reminder, which you can switch on in Progress (section 11). You can also
             share text to the App yourself (for example with Share on Android&apos;s &quot;copied&quot; preview): the
             App picks out the nutrition numbers on your phone, fills in the form for you to check, and does not keep
             the text.
@@ -297,8 +302,9 @@ export default function PrivacyPage() {
           <BulletList>
             <li>
               <Strong>Android backup (Google account):</Strong> if backup is turned on in your phone&apos;s settings,
-              Android may keep an encrypted backup of the App&apos;s data in your Google account and restore it on a
-              new phone. This is done entirely by Android and Google; we cannot access these backups. You can turn
+              Android may keep a backup of the App&apos;s data in a private folder of your Google Drive account and
+              restore it on a new phone. Android&apos;s documentation says this backup is end-to-end encrypted on Android 9
+              and later when the phone has a screen lock. This is done entirely by Android and Google; we cannot access these backups. You can turn
               it off or delete it in your phone&apos;s Google backup settings.
             </li>
             <li>
@@ -370,9 +376,11 @@ export default function PrivacyPage() {
               return from Lens, or text you choose to share to the App (section 4). It cannot see your other apps.
             </li>
             <li>
-              <Strong>Notifications (Android 13 and later, optional):</Strong> only the one &quot;Tap to go back&quot;
-              notification while Google Lens is open (section 4). No reminders, offers or other notifications. You can
-              turn it off at any time in Android&apos;s settings for the App.
+              <Strong>Notifications (Android 13 and later, optional):</Strong> two, both made on your phone and neither
+              holding your data: the &quot;Tap to go back&quot; notification while Google Lens is open (section 4), and,
+              only if you switch it on in Progress, the weekly weigh-in reminder on the day and time you pick. No offers
+              or other notifications. You can turn the reminder off in Progress and either notification off at any time
+              in Android&apos;s settings for the App.
             </li>
           </BulletList>
         </ContentSection>
