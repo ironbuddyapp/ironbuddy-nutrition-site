@@ -39,6 +39,8 @@ const V0110 = "2026-10-28";
 const PRIVACY_CORRECTED = "2026-11-08";
 /** Privacy policy covers meal planning, the dietitian's plan and the page scanner (HQ job J-20261108-1). */
 const PRIVACY_FEATURES = "2026-11-09";
+/** Privacy policy names the social media rows and the counting page on the Workout site (HQ job J-20261109-3). */
+const PRIVACY_SOCIAL = "2026-11-09";
 
 /** The current screenshot set (appScreenshots in content.ts). */
 const screenshotImages = [
@@ -109,7 +111,7 @@ export const pages = {
     summary: "What the app keeps on your phone, and what it never sends anywhere.",
     keywords: null,
     published: LAUNCH,
-    modified: PRIVACY_FEATURES,
+    modified: PRIVACY_SOCIAL,
   },
 } as const satisfies Record<string, PageDef>;
 
