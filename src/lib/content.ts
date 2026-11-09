@@ -67,7 +67,7 @@ export const features: Array<{ title: string; description: string; icon: Feature
   },
   {
     title: "Offline & Private",
-    description: "No account, no analytics. Nothing leaves your phone.",
+    description: "No account, no analytics. The App sends nothing to us.",
     icon: "shield",
   },
 ];
@@ -206,7 +206,7 @@ export const homeFaqs: Faq[] = [
     id: "offline",
     question: "Does it really work offline?",
     answer:
-      "Yes. The food database, the million barcodes and the photo recognition are all inside the app. Nothing is looked up online, and the app has no account to sign in to. The only time it uses the internet is when you buy or restore the full version through Google Play.",
+      "Yes. The food database, the million barcodes and the photo recognition are all inside the app. Nothing is looked up online, and the app has no account to sign in to. Logging, the food list, barcodes, food recognition and reading labels and plans work without a connection. Google Play uses the internet for the purchase, the review prompt and update notices, and the first use of the page scanner and Google Lens need it too.",
   },
   {
     id: "price",

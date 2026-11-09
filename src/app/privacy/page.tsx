@@ -24,7 +24,7 @@ const contents = [
   ["applies-to", "2. Who we are and what this covers"],
   ["data-on-device", "3. Data stored on your device"],
   ["camera", "4. Camera and photos"],
-  ["recognition", "5. Food recognition and label reading on your phone"],
+  ["recognition", "5. Food recognition, label reading and plan reading on your phone"],
   ["purchases", "6. Purchases and payment"],
   ["google-play", "7. Review prompts and update notices"],
   ["not-collected", "8. Data we do not collect"],
@@ -59,7 +59,9 @@ export default function PrivacyPage() {
           <>
             IronBuddy: Nutrition Tracker (“the App”) is a calorie and nutrition tracker that keeps everything on your
             phone. This policy explains what the App stores, where it stays, and what it does <em>not</em> collect. In
-            short: your meals, your body data and your photos never reach us.
+            short: we never receive your meals, your body data, your plans or your photos. A copy leaves your phone
+            only when you choose it, or when Android&apos;s own backup or a Google app you open makes it, and this
+            policy names each one.
           </>
         }
       >
@@ -99,7 +101,10 @@ export default function PrivacyPage() {
         <ContentSection id="summary" title="1. Summary">
           <BulletList>
             <li>Everything you enter (meals, weight, body details, your goal) is stored on your phone only.</li>
-            <li>There is no account, no IronBuddy server and no cloud sync. We never receive your data.</li>
+            <li>
+              There is no account and no IronBuddy server, and the App has no IronBuddy cloud sync. We never receive
+              your data.
+            </li>
             <li>
               Photos of your plate, of barcodes and of nutrition labels are read on your phone and are never sent to
               us. The only exception is one you choose: if you tap &quot;Read with Google Lens&quot;, that one label
@@ -115,16 +120,24 @@ export default function PrivacyPage() {
             </li>
             <li>The App has no ads, no analytics and no crash-reporting service. We do not sell or share data.</li>
             <li>
-              A weekly weigh-in reminder is off until you switch it on. It is a notification made on your phone
-              (section 11).
-            </li>
-            <li>
               The food database, the barcode list and the food recognition model are built into the App, so looking
               food up never goes online.
             </li>
             <li>
-              The only internet use is through Google Play: the one-time purchase, the occasional review prompt and
-              update notices (sections 6 and 7).
+              A dietitian&apos;s plan you bring in by scan, photo or file is read on your phone. The App keeps only the
+              foods you confirm, as planned meals. It does not save the photo, the file or the text it read. Pages
+              scanned with Google&apos;s page scanner are image files that Google&apos;s scanner writes, and section 5
+              says what we know about them and what we do not.
+            </li>
+            <li>
+              The App&apos;s own screens connect to nothing outside the App. Google Play handles the one-time purchase,
+              the occasional review prompt and update notices (sections 6 and 7), and Google&apos;s own app handles
+              anything you choose to open in Google Lens (section 4). The first time you scan a plan, Google Play
+              services fetches Google&apos;s page scanner once, which needs the internet that one time (section 5).
+            </li>
+            <li>
+              A weekly weigh-in reminder is off until you switch it on. It is a notification made on your phone
+              (section 11).
             </li>
             <li>
               Copies of your data exist outside the App only where you or your phone put them: Android&apos;s own
@@ -141,8 +154,8 @@ export default function PrivacyPage() {
           </p>
           <p>
             This policy covers the IronBuddy: Nutrition Tracker app for Android distributed on Google Play, including
-            its testing versions. It does not cover Google Play, Android&apos;s backup service, Google Lens and the
-            Google app, or the apps and services you choose to send files to (for example email, Google Drive or messaging apps). Our other app,
+            its testing versions. It does not cover Google Play, Google Play services and Google&apos;s page scanner,
+            Android&apos;s backup service, Google Lens and the Google app, or the apps and services you choose to send files to (for example email, Google Drive or messaging apps). Our other app,
             IronBuddy: Workout Tracker, has <TextLink href={`${siteConfig.brandUrl}/privacy/`}>its own policy</TextLink>.
           </p>
         </ContentSection>
@@ -152,13 +165,20 @@ export default function PrivacyPage() {
           <BulletList>
             <li>
               <Strong>Food log:</Strong> the meals you log (name, amount in grams, calories, protein, carbs, fat,
-              meal of the day and date), your saved meals, and products you add by
-              barcode.
+              meal of the day and date), your saved meals, products you add by barcode, and foods you add yourself.
             </li>
             <li>
               <Strong>Health and body data:</Strong> the answers you give to set up your plan (goal, sex, age,
               height, weight, daily movement, training days, pace, and optionally a goal weight), your weigh-ins, and
-              your weekly check-ins and the target changes you accept.
+              your weekly check-ins and the target changes you accept. If you switch on the weekly weigh-in reminder,
+              the day and time you pick.
+            </li>
+            <li>
+              <Strong>Your week plan:</Strong> the meals you plan for coming days, including those you add from a
+              dietitian&apos;s plan. For each: the food&apos;s name, the amount in grams, calories, protein, carbs, fat,
+              the meal of the day, the date, and whether you have logged it. The plan is part of your data, so it is in
+              Android&apos;s backup, in the backup file and in a copy you export (section 9). What a plan shows about
+              how you eat can say something about your health.
             </li>
             <li>
               <Strong>Personal details you choose to enter:</Strong> an optional first name, shown on Today.
@@ -181,7 +201,8 @@ export default function PrivacyPage() {
         <ContentSection id="camera" title="4. Camera and photos">
           <p>
             The App uses the camera only when you tap to take a photo of your plate, of a barcode or of a nutrition
-            label. You can also pick an existing picture with Android&apos;s photo picker, in which case the App
+            label. Taking a photo of a dietitian&apos;s plan opens Google&apos;s page scanner instead (section 5). You
+            can also pick an existing picture with Android&apos;s photo picker, in which case the App
             receives only the picture you choose.
           </p>
           <BulletList>
@@ -241,7 +262,7 @@ export default function PrivacyPage() {
           </p>
         </ContentSection>
 
-        <ContentSection id="recognition" title="5. Food recognition and label reading on your phone">
+        <ContentSection id="recognition" title="5. Food recognition, label reading and plan reading on your phone">
           <p>
             Dish suggestions come from a food recognition model (SigLIP 2, an open model published by Google) that is
             built into the App and runs entirely on your phone, using ONNX Runtime, open-source software from Microsoft.
@@ -250,15 +271,62 @@ export default function PrivacyPage() {
           </p>
           <p>
             No photo, result or usage information is sent to Google, Microsoft or anyone else, or to us: the App does
-            not allow any connection from its interface except to its own built-in files.
+            not allow any connection from its interface except to its own built-in files. (Google Lens, section 4, and
+            Google&apos;s page scanner, below, are Google&apos;s own.)
+          </p>
+          <p>
+            <Strong>A dietitian&apos;s plan.</Strong> On Week, &quot;Have a plan from a dietitian?&quot; offers two ways
+            in: Take a photo and Import a file. Import a file uses Android&apos;s own file picker, which gives the App only
+            the file you pick: a PDF, a Word file (.docx), a text file or a picture. Take a photo opens Google&apos;s page
+            scanner (below). Either way the text is read on your phone: PDF and Word files with software built into the
+            App (pdf.js, an open-source library from Mozilla, loaded the first time you open a PDF), and pictures,
+            scanned pages and scanned PDFs with the same built-in text models that read nutrition labels. You then check
+            the text line by line.
+          </p>
+          <p>
+            <Strong>What the App keeps and does not keep.</Strong> The App keeps only the foods you confirm, as planned
+            meals (section 3). It reads the file or picture into its memory, takes the text out, and drops both when you
+            close the check screen or add the lines. It does not save the file, the picture or the text it read, does not
+            put them in the backup file or in Android&apos;s backup, and keeps no wording or name from the plan. A short
+            diagnostic log in the App&apos;s memory may hold lines of text read from a page until you close the App; it is
+            not saved. The App sends nothing to us or to anyone else.
+          </p>
+          <p>
+            <Strong>Google&apos;s page scanner.</Strong> On Android, Take a photo opens Google&apos;s document scanner,
+            which is part of Google Play services on your phone (Google&apos;s ML Kit). It finds the page, straightens it
+            and can take several pages. It uses the camera under Google Play services&apos; own permission. Google says
+            the whole scanner flow operates on the device. The first time, Google Play services fetches the scanner
+            itself from Google, which needs an internet connection that one time; after that it needs none. The scanner
+            writes the pages you scan as image files on your phone and hands them to the App. The App reads each into
+            memory and does not keep it, and it does not delete those files. Google does not say where the files are
+            stored or when they are deleted, so we cannot tell you; they may stay in your phone&apos;s storage for the App
+            until Android clears them. We also have not been able to establish what Google Play services itself records
+            about installing or using the scanner; see <GooglePolicyLink /> and{" "}
+            <TextLink href="https://developers.google.com/ml-kit/android-data-disclosure">
+              Google&apos;s ML Kit data disclosure
+            </TextLink>
+            . If your phone has no Google Play services, has too little memory for the scanner (under 1.7 GB), or has no
+            internet the first time, the App says so and you can use Import a file instead.
+          </p>
+          <p>
+            <Strong>Other people&apos;s details and health information.</Strong> A dietitian&apos;s plan can carry details
+            you did not enter: a dietitian&apos;s or clinic&apos;s name, your name or someone else&apos;s, a diagnosis,
+            test results or the dietitian&apos;s notes. The App shows the text it read on your screen so that you can check
+            it, and keeps none of it. The original photo or file stays where you took it or stored it (for example your
+            gallery, your Downloads folder or an email), and this policy does not cover those places; pages from the
+            page scanner are described above. Bring in only plans
+            that are yours or that you have permission to use.
           </p>
         </ContentSection>
 
         <ContentSection id="purchases" title="6. Purchases and payment">
           <p>
-            The App is free to download with a free trial (currently {siteConfig.freeTrialDays} days) of everything.
-            After the trial, a one-time purchase through Google Play keeps it unlocked; there is no subscription.
-            Without the purchase your data stays visible but logging and editing are locked.
+            The App is free to download with a free trial (currently {siteConfig.freeTrialDays} days) that covers
+            logging, photos, search, barcodes, My meals and your numbers. Some parts are the full version only, even
+            during the trial: meal planning (Week, planned meals on Today and a dietitian&apos;s plan by scan or file),
+            the backup file and exports, share cards, choosing your Today layout and the accent colour. After the
+            trial, a one-time purchase through Google Play keeps it unlocked; there is no subscription. Without the
+            purchase your data stays visible but logging and editing are locked.
           </p>
           <p>
             The purchase is made and processed entirely by Google Play. The App receives only confirmation that it
@@ -284,11 +352,15 @@ export default function PrivacyPage() {
           <p>As of the date at the top of this page, the App does not:</p>
           <BulletList>
             <li>create accounts or ask you to sign in;</li>
-            <li>send your meals, body data, photos or settings to any server, ours or anyone else&apos;s;</li>
-            <li>contain advertising, analytics or crash-reporting code;</li>
+            <li>send your meals, body data, plans, photos or settings to any server, ours or anyone else&apos;s;</li>
+            <li>
+              contain advertising, analytics or crash-reporting code of its own (it does include Google&apos;s client
+              library for the page scanner, section 5);
+            </li>
             <li>sell, rent or share personal data;</li>
             <li>
-              access your location, contacts or other apps&apos; data, or use the microphone except when you tap
+              access your location, contacts or other apps&apos; data, read any file except one you pick in
+              Android&apos;s file picker (section 5), or use the microphone except when you tap
               &quot;Say the numbers&quot; (section 4), apart from two things for Google Lens:
               checking whether Google&apos;s app is installed, and reading the text you copied in Lens, once, when you
               come back, or text you choose to share to the App (section 4);
@@ -310,12 +382,12 @@ export default function PrivacyPage() {
             <li>
               <Strong>Backup file (full version):</Strong> the App keeps one up-to-date copy of your data at{" "}
               <Code>Download/IronBuddy Nutrition/ironbuddy-nutrition-backup.json</Code>, replacing it each time your
-              data changes. It stays on your phone, where you and apps you allow to read your files can open it. You
+              data changes. It includes your week plan. It stays on your phone, where you and apps you allow to read your files can open it. You
               can turn it off in Settings.
             </li>
             <li>
-              <Strong>Export a copy (full version):</Strong> a JSON file of your data, sent wherever you choose through
-              Android&apos;s share sheet.
+              <Strong>Export a copy (full version):</Strong> a JSON file of your data, including your week plan, sent
+              wherever you choose through Android&apos;s share sheet.
             </li>
             <li>
               <Strong>Export for a coach (full version):</Strong> a spreadsheet (CSV) or PDF of your meals and weight
@@ -332,7 +404,8 @@ export default function PrivacyPage() {
             </li>
           </BulletList>
           <p>
-            Everything in this list except Android backup happens only when you choose it. Once a file is saved or
+            Everything in this list except Android backup and the backup file (which you can turn off) happens only
+            when you choose it. Once a file is saved or
             shared, where it goes is outside our control and covered by that destination&apos;s own policy.
             Uninstalling the App does not delete files already in your Download folder or backups in your Google
             account.
@@ -341,18 +414,28 @@ export default function PrivacyPage() {
 
         <ContentSection id="transmission" title="10. What leaves your phone">
           <p>
-            Nothing you enter is sent to us or to any server. The food database (from USDA, CIQUAL and Open Food
+            The App sends nothing you enter to us or to any server. (Android&apos;s own backup, section 9, is made by
+            Android, not by the App.) The food database (from USDA, CIQUAL and Open Food
             Facts), the barcode list and the food recognition model are copies built into the App, so every lookup
-            happens on your phone. The App&apos;s only network use is Google Play (purchase, review prompt, update
-            check), links you choose to open in your browser, such as this policy, and Google Lens if you choose to open it
-            (section 4), which is Google&apos;s app, not ours.
+            happens on your phone. The App itself uses the network only through Google Play (purchase, review prompt,
+            update check), through links you choose to open in your browser, such as this policy, and, the first time you
+            scan a plan, through Google Play services, which fetches Google&apos;s page scanner once (section 5). Google
+            Lens, if you choose to open it (section 4), is Google&apos;s app, not ours. Logging, the food list, barcodes,
+            food recognition and reading labels and plans work without an internet connection. Buying the full version,
+            Google Lens and the first use of the page scanner need one.
           </p>
         </ContentSection>
 
         <ContentSection id="permissions" title="11. Permissions">
           <BulletList>
             <li>
-              <Strong>Camera:</Strong> only when you tap to photograph a plate, a barcode or a nutrition label (section 4).
+              <Strong>Camera:</Strong> only when you tap to photograph a plate, a barcode or a nutrition label (section
+              4). Google&apos;s page scanner, which you open to scan a plan, uses the camera under Google Play
+              services&apos; own permission, so Android does not ask for the camera for the App there (section 5).
+            </li>
+            <li>
+              <Strong>Files (no permission asked):</Strong> when you tap Import a file on Week, Android&apos;s own file
+              picker opens and gives the App only the file you choose (section 5).
             </li>
             <li>
               <Strong>Microphone:</Strong> only while you tap &quot;Say the numbers&quot;, to recognise the calories and
@@ -360,7 +443,8 @@ export default function PrivacyPage() {
             </li>
             <li>
               <Strong>Internet:</Strong> needed by Google Play for the purchase, the review prompt and update notices,
-              and to open links in your browser. It is not used to upload your data.
+              by Google Play services the first time you scan a plan (to fetch Google&apos;s page scanner once), and to
+              open links in your browser. It is not used to upload your data.
             </li>
             <li>
               <Strong>Google Play Billing:</Strong> to make and confirm the one-time purchase.
@@ -394,6 +478,16 @@ export default function PrivacyPage() {
               <Strong>Plate photos:</Strong> deleting a meal deletes its photo copy too.
             </li>
             <li>
+              <Strong>Scanned plan pages:</Strong> Google&apos;s page scanner writes the pages you scan as image files on
+              your phone. The App does not delete them, and Google does not say where they are stored or when they are
+              deleted (section 5).
+            </li>
+            <li>
+              <Strong>Your week plan:</Strong> remove planned meals one by one on Week, or use Reset all data, which
+              erases the plan with everything else. Copies in Android&apos;s backup, in the backup file and in exports
+              are covered below.
+            </li>
+            <li>
               <Strong>Uninstall:</Strong> removes the App and its private storage.
             </li>
             <li>
@@ -414,7 +508,9 @@ export default function PrivacyPage() {
           <p>
             The App is a food logging and planning tool. It is <Strong>not a medical device</Strong> and does not
             diagnose, treat or prevent any condition. Calorie and macro targets are estimates from standard formulas
-            and from your own logs, and photo-based meals are estimates. If you are pregnant or breastfeeding, have
+            and from your own logs, and photo-based meals are estimates. A dietitian&apos;s plan you bring in is read as
+            text and turned into estimates from the App&apos;s own food list; the App does not check whether a plan or its
+            numbers suit you, so follow your dietitian or doctor if they differ from the App. If you are pregnant or breastfeeding, have
             had an eating disorder, or have a medical condition, talk to a doctor before following calorie targets.
           </p>
         </ContentSection>
@@ -439,9 +535,14 @@ export default function PrivacyPage() {
 
         <ContentSection id="third-party" title="16. Third-party services and this website">
           <p>
-            Google Play (purchases, review prompts, update notices), Android&apos;s backup, and Google Lens in the
-            Google app (only if you choose it, section 4) are run by Google under its own terms; see{" "}
-            <GooglePolicyLink />. Apps you share files to are covered by their own policies. Google Lens is a trademark
+            Google Play (purchases, review prompts, update notices), Google Play services and its page scanner
+            (section 5), Android&apos;s backup, and Google Lens in the Google app (only if you choose it, section 4) are
+            run by Google under its own terms; see <GooglePolicyLink /> and{" "}
+            <TextLink href="https://developers.google.com/ml-kit/android-data-disclosure">
+              Google&apos;s ML Kit data disclosure
+            </TextLink>
+            . The App reaches the page scanner through an open-source bridge (Capawesome&apos;s Capacitor plugin,
+            Apache-2.0) that has no network code of its own. Apps you share files to are covered by their own policies. Google Lens is a trademark
             of Google LLC; IronBuddy is not made, endorsed or sponsored by Google.
           </p>
           <p>
