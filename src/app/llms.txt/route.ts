@@ -23,7 +23,7 @@ export function GET() {
     "- Platform: Android, on Google Play. Not available on iPhone yet.",
     `- Android package: ${siteConfig.playStoreId}`,
     ...(siteConfig.playListingLive ? [`- Google Play: ${siteConfig.playStoreUrl}`] : ["- Google Play: coming soon"]),
-    "- Works offline: yes (food search, barcodes and photo recognition need no connection)",
+    "- Works offline: yes (food search, barcodes and photo recognition need no connection; the page scanner needs a connection once, the first time)",
     "- Account required: no",
     "- Ads: none. Analytics: none",
     "- Subscription: none",
