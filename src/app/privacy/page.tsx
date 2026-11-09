@@ -120,6 +120,10 @@ export default function PrivacyPage() {
             </li>
             <li>The App has no ads, no analytics and no crash-reporting service. We do not sell or share data.</li>
             <li>
+              The social media rows in Settings open a page on workout.ironbuddy.fit that counts the tap with
+              GoatCounter, then forwards you (section 16).
+            </li>
+            <li>
               The food database, the barcode list and the food recognition model are built into the App, so looking
               food up never goes online.
             </li>
@@ -544,6 +548,18 @@ export default function PrivacyPage() {
             . The App reaches the page scanner through an open-source bridge (Capawesome&apos;s Capacitor plugin,
             Apache-2.0) that has no network code of its own. Apps you share files to are covered by their own policies. Google Lens is a trademark
             of Google LLC; IronBuddy is not made, endorsed or sponsored by Google.
+          </p>
+          <p>
+            <Strong>Links to our social media pages:</Strong> Settings → About has a row, Follow IronBuddy, that opens
+            a list of Instagram, TikTok, YouTube and Facebook. A tap on one of them opens a page on our Workout website,
+            workout.ironbuddy.fit (for example /from-nutrition-ig), in your phone&apos;s browser. That page uses
+            GoatCounter to count the visit as one event named after the network you tapped, then forwards you to our
+            page on that network. GoatCounter counts the page, the referrer and general details such as browser,
+            operating system, screen width and country; it uses no cookies and does not store IP addresses (see{" "}
+            <TextLink href="https://www.goatcounter.com/help/privacy">GoatCounter&apos;s privacy policy</TextLink>). It
+            does not record your name, an account or anything you logged, and the App itself sends nothing. Nothing is
+            counted until you tap a network. After the forward, that network&apos;s own privacy policy applies. We
+            count taps, not follows.
           </p>
           <p>
             <Strong>This website</Strong> (nutrition.ironbuddy.fit) uses no cookies, no analytics and no tracking. It
