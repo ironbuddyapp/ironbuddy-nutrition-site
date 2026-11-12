@@ -242,7 +242,7 @@ export default function PrivacyPage() {
             that moment the photo is in Google&apos;s app, not ours: Google receives and processes it under its own terms
             and <GooglePolicyLink />, as part of your own use of Google&apos;s services. If you have turned on Visual
             Search History in your Google account, Google may keep the image there; see{" "}
-            <TextLink href="https://support.google.com/websearch/answer/14601082">Google&apos;s help page</TextLink>.
+            <TextLink href="https://support.google.com/websearch/answer/17028154">Google&apos;s help page</TextLink>.
           </p>
           <p>
             In Lens you select the label&apos;s text and tap Copy yourself. When you come back, the App reads your
