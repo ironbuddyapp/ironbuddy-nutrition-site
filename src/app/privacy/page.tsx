@@ -62,7 +62,7 @@ export default function PrivacyPage() {
         updated={pages.privacy.modified}
         lead={
           <>
-            IronBuddy: Nutrition Tracker (“the App”) is a calorie and nutrition tracker that keeps everything on your
+            IronBuddy: Nutrition Tracker (“the App”) is a calorie and nutrition tracker that keeps your data on your
             phone. This policy explains what the App stores, where it stays, and what it does <em>not</em> collect. In
             short: we never receive your meals, your body data, your plans or your photos. A copy leaves your phone
             only when you choose it, when your phone&apos;s own backup makes it (Android&apos;s backup to your Google
@@ -108,7 +108,10 @@ export default function PrivacyPage() {
 
         <ContentSection id="summary" title="1. Summary">
           <BulletList>
-            <li>Everything you enter (meals, weight, body details, your goal) is stored on your phone only.</li>
+            <li>
+              Everything you enter (meals, weight, body details, your goal) is stored on your phone. Copies exist only as
+              section 9 describes; on iPhone that includes the App&apos;s own copy in your private iCloud.
+            </li>
             <li>
               There is no account and no IronBuddy server, and the App has no IronBuddy cloud sync. We never receive
               your data.
@@ -119,14 +122,16 @@ export default function PrivacyPage() {
               one label photo is handed to Google&apos;s app (section 4). The iPhone app has no Google Lens button.
             </li>
             <li>
-              One small copy of a plate photo you log from Shot is kept with that meal, on your phone only: it is never
-              uploaded by the App, never added to your gallery or Photos, not in the backup file or the App&apos;s iCloud
-              copy, and it is deleted with the meal (section 4).
+              A small copy of a plate photo you log from Shot is kept on your phone with that meal (and with it in My
+              meals if you save it). It is never uploaded by the App, never added to your gallery or Photos, and not in
+              the backup file or the App&apos;s iCloud copy. It is deleted when you delete the last logged meal or saved
+              meal that uses it.
+              On Android the phone&apos;s camera also leaves each full-size photo in the App&apos;s own storage (section 4).
             </li>
             <li>
-              &quot;Say the numbers&quot; uses the microphone only when you tap it, with the phone&apos;s own on-device
-              speech recognition (Android&apos;s, or Apple&apos;s on iPhone). The audio and the words stay on your phone
-              (section 4).
+              &quot;Say the numbers&quot; and &quot;Say it&quot; use the microphone only when you tap them, with the
+              phone&apos;s own on-device speech recognition (Android&apos;s, or Apple&apos;s on iPhone). The audio and the
+              words stay on your phone (section 4).
             </li>
             <li>The App has no ads, no analytics and no crash-reporting service. We do not sell or share data.</li>
             <li>
@@ -139,10 +144,11 @@ export default function PrivacyPage() {
             </li>
             <li>
               A dietitian&apos;s plan you bring in by scan, photo or file is read on your phone. The App keeps only the
-              foods you confirm, as planned meals. It does not save the photo, the file or the text it read. On
+              foods you add with &quot;Add the week&quot;, as planned meals. It does not save the photo, the file or the
+              text it read. On
               Android, pages scanned with Google&apos;s page scanner are image files that Google&apos;s scanner writes,
               and section 5 says what we know about them and what we do not. On iPhone, Apple&apos;s document camera is
-              used, and the App deletes the scanned pages once it has read them.
+              used, and the App deletes the scanned pages as soon as it has loaded them.
             </li>
             <li>
               The App&apos;s own screens connect to nothing outside the App. On Android, Google Play handles the
@@ -160,8 +166,8 @@ export default function PrivacyPage() {
             <li>
               Copies of your data exist outside the App only where you or your phone put them: on Android,
               Android&apos;s own backup to your Google account; on iPhone, the App&apos;s copy in your own iCloud and your
-              iPhone&apos;s iCloud Backup, if it is on; and, in the full version, a backup file and exports you choose
-              to make (section 9).
+              iPhone&apos;s iCloud Backup, if it is on; and a backup file and exports you choose to make (full version;
+              on iPhone anyone can also export a copy just before deleting their data) (section 9).
             </li>
           </BulletList>
         </ContentSection>
@@ -174,7 +180,10 @@ export default function PrivacyPage() {
           <p>
             This policy covers the IronBuddy: Nutrition Tracker app for Android distributed on Google Play and the
             IronBuddy: Nutrition Tracker app for iPhone distributed on the Apple App Store, including their testing
-            versions. It does not cover Google Play, Google Play services and Google&apos;s page scanner, Android&apos;s
+            versions. A testing version may also have a &quot;Test recorder&quot; in Settings: it keeps each photo taken
+            in Shot and Scan on the phone, with what the App read and what you logged, until you delete it in the Test
+            recorder (&quot;Clear exported tests&quot; or &quot;Delete all&quot;); its Export sends a copy through the share
+            sheet and does not remove them. Only versions built for testing include it. It does not cover Google Play, Google Play services and Google&apos;s page scanner, Android&apos;s
             backup service, Google Lens and the Google app, the App Store, iCloud and iCloud Backup, iOS and its
             speech recognition and document camera, or the apps and services you choose to send files to (for example
             email, Google Drive, iCloud Drive or messaging apps). Our other app,
@@ -186,8 +195,10 @@ export default function PrivacyPage() {
           <p>The App keeps the following in its private storage on your phone, and uses it only to work for you:</p>
           <BulletList>
             <li>
-              <Strong>Food log:</Strong> the meals you log (name, amount in grams, calories, protein, carbs, fat,
-              meal of the day and date), your saved meals, products you add by barcode, and foods you add yourself.
+              <Strong>Food log:</Strong> the meals you log (name, amount in grams or millilitres or a number of
+              portions, calories, protein, carbs, fat, an estimate range, meal of the day, date and the time you logged
+              it, and the barcode if it came from one), your saved meals, products you add by barcode, and foods you add
+              yourself.
             </li>
             <li>
               <Strong>Health and body data:</Strong> the answers you give to set up your plan (goal, sex, age,
@@ -204,17 +215,21 @@ export default function PrivacyPage() {
               how you eat can say something about your health.
             </li>
             <li>
-              <Strong>Personal details you choose to enter:</Strong> an optional first name, shown on Today.
+              <Strong>Personal details you choose to enter:</Strong> an optional first name, shown on Today, on share
+              cards and in the export for a coach.
             </li>
             <li>
-              <Strong>Settings:</Strong> units, theme, accent colour, tips, and the layout of your Today cards.
+              <Strong>Settings:</Strong> units, theme, accent colour, tips, the layout of your Today cards and how the
+              calories card shows protein, carbs and fat; and the App&apos;s own records (which tips and tours you have
+              seen, when it last asked for a rating, an update notice you dismissed).
             </li>
             <li>
               <Strong>Trial and purchase status:</Strong> when your free trial started, the latest time the App has
               seen (so that moving the phone&apos;s date back does not extend the trial), whether you have bought the
               full version, and the identifier that confirms it: the purchase token Google Play provides on Android,
               or the transaction identifier the App Store provides on iPhone. On iPhone the trial start is the date
-              the App Store records for the free &quot;7-day Trial&quot; item (section 6).
+              the App Store records for the free &quot;7-day Trial&quot; item, or an earlier start the App already had
+              (section 6).
             </li>
           </BulletList>
           <p>
@@ -227,57 +242,72 @@ export default function PrivacyPage() {
           <p>
             The App uses the camera only when you tap to take a photo of your plate, of a barcode or of a nutrition
             label. Taking a photo of a dietitian&apos;s plan opens a page scanner instead: Google&apos;s on Android,
-            Apple&apos;s document camera on iPhone (section 5). You can also pick an existing picture with the
-            phone&apos;s own photo picker, in which case the App receives only the picture you choose. On iPhone, iOS
-            asks once for permission to use the camera; the App has no permission to read your Photos library.
+            Apple&apos;s document camera on iPhone (section 5). For a dietitian&apos;s plan, &quot;Import a file&quot;
+            can also take an existing picture through the phone&apos;s own picker, and the App receives only the file you
+            choose. On iPhone, iOS asks once for permission to use the camera; the App has no permission to read your
+            Photos library.
           </p>
           <BulletList>
             <li>
-              The picture is read on your phone: to suggest which foods are on the plate, to read the barcode digits,
-              or to read the numbers on a nutrition label.
+              The picture is read on your phone: to suggest which foods are on the plate, to read the barcode digits
+              (on Android with the Android System WebView&apos;s built-in barcode reader, on iPhone with Apple&apos;s Vision
+              framework), or to read the numbers on a nutrition label.
             </li>
             <li>
-              It is shown on screen while you confirm the meal. A barcode photo or a nutrition label photo is then
-              discarded. The App never adds a meal photo to your gallery or Photos and never sends one to us. If you use
-              Google Lens on Android (below), the App keeps that one label photo as a temporary file in its private
-              storage so Google&apos;s app can open it, and deletes it when you come back.
+              It is shown on screen while you confirm the meal. Apart from the camera files on Android (below), the App
+              does not keep a barcode or label photo; it never adds a meal photo to your gallery or Photos, and never
+              sends one to us. If you use Google Lens on Android (below), the App keeps that one label photo as a
+              temporary file in its private storage so Google&apos;s app can open it, and deletes it when it checks your
+              clipboard after you come back; otherwise the next photo you hand to Lens replaces it.
             </li>
             <li>
-              <Strong>Plate photos are the one exception.</Strong> When you log a plate from Shot, the App keeps a small
-              copy of the photo (480 px) with that meal, so you can see it on Today, in the meal&apos;s details and in
-              My meals. The copy stays in the App&apos;s private storage on your phone: the App never uploads it or adds
-              it to your gallery or Photos, it is not in the backup file or the App&apos;s iCloud copy, and it is
-              deleted when you delete the meal. On Android it is not in Android&apos;s backup either. On iPhone, if
-              iCloud Backup is on, iOS may include the App&apos;s private storage, with these copies, in your
-              iPhone&apos;s own backup (section 9).
+              <Strong>Camera files on Android.</Strong> On Android, the phone&apos;s camera hands each photo (plate,
+              barcode or label) to the App as a full-size image file in the App&apos;s own storage on the phone, and the
+              App does not delete these files yet. They stay on your phone only: the App never uploads them, they are
+              not in Android&apos;s backup, the backup file or any export, and they are removed when you uninstall the
+              App.
+            </li>
+            <li>
+              <Strong>Plate photos kept with a meal.</Strong> When you log a plate from Shot, the App keeps a small copy
+              of the photo (at most 480 px on its longest side) with that meal, so you can see it on Today, in the
+              meal&apos;s details and in My meals. The copy stays in the App&apos;s private storage on your phone: the App
+              never uploads it or adds it to your gallery or Photos, it is not in the backup file or the App&apos;s iCloud
+              copy, and it is deleted when you delete the last logged meal or saved meal that uses it. On Android it is not in
+              Android&apos;s backup either. On iPhone, if iCloud Backup is on, iOS may include the App&apos;s private
+              storage, with these copies, in your iPhone&apos;s own backup (section 9).
             </li>
             <li>The App does not use the camera in the background and does not record video.</li>
           </BulletList>
           <p>
-            <Strong>Say the numbers (microphone).</Strong> On the nutrition-label form you can tap &quot;Say the
-            numbers&quot; and tell the App the calories and macros. It listens only while you have tapped it, using
-            the phone&apos;s own speech recognition (English): Android&apos;s speech recogniser on Android, and on
-            iPhone Apple&apos;s speech recognition set to work on the iPhone only, so if your iPhone cannot recognise
-            English on the device, the App says so and you type the numbers instead. On iPhone, iOS asks once for
+            <Strong>Say the numbers (microphone).</Strong> In Shot&apos;s label and barcode screens and in Quick add you
+            can tap &quot;Say the numbers&quot; and tell the App the calories and macros, and in Shot&apos;s &quot;What&apos;s
+            on the plate?&quot; you can tap &quot;Say it&quot; to name the foods. It listens only after you tap, until you
+            stop speaking, using the phone&apos;s own on-device speech recognition (English): Android&apos;s on-device
+            recogniser (Android 12 and later), or on iPhone Apple&apos;s speech recognition set to work on the iPhone
+            only. If your phone cannot recognise English on the device, the App says so and you type instead. On
+            iPhone, iOS asks once for
             permission to use the microphone and speech recognition. The audio and the words stay on your phone;
             nothing is sent to us or collected, and the App does not record or keep the sound.
           </p>
           <p>
             <Strong>Google Lens (optional).</Strong> On Android, the nutrition-label form offers &quot;Read with Google
-            Lens&quot; for labels the App&apos;s own reader cannot manage. Only if you tap it, the App hands the label
-            photo (the one you just took, or a new one) to Google Lens in the Google app on your phone. If Lens&apos;s
-            own share screen is not available, Android&apos;s share sheet opens instead and you choose the app. From
+            Lens&quot; (in Shot, &quot;Google Lens&quot;) for labels the App&apos;s own reader cannot manage. Only if you
+            tap it, the App hands the label photo (the one you just took, or a new one) to Google Lens in the Google app
+            on your phone. If no share screen in the Google app opens, Android&apos;s share sheet opens instead and you
+            choose the app. From
             that moment the photo is in Google&apos;s app, not ours: Google receives and processes it under its own terms
             and <GooglePolicyLink />, as part of your own use of Google&apos;s services. If you have turned on Visual
             Search History in your Google account, Google may keep the image there; see{" "}
             <TextLink href="https://support.google.com/websearch/answer/17028154">Google&apos;s help page</TextLink>.
           </p>
           <p>
-            In Lens you select the label&apos;s text and tap Copy yourself. When you come back, the App reads your
-            clipboard once and uses the text only if it was copied after you left for Lens. It picks out the nutrition
-            numbers on your phone, fills in the form for you to check, and does not keep the copied text. Android may
-            show a short &quot;IronBuddy Nutrition pasted from your clipboard&quot; notice when this happens. The App
-            never reads the clipboard at any other time, and it receives nothing else from Google: no account details
+            In Lens you select the label&apos;s text and tap Copy yourself. When you come back while the App is waiting
+            for Lens, or when you tap &quot;I copied it: paste now&quot;, the App reads your clipboard and uses the text
+            only if it was copied after you left for Lens (Android 7 cannot tell when text was copied, so there any
+            copied text is used). It picks out the nutrition numbers on your phone, fills in the form for you to check,
+            and does not keep the copied text. Android may show a short &quot;IronBuddy Nutrition pasted from your
+            clipboard&quot; notice when this happens. The App does not read the clipboard at any other time, and it
+            receives nothing else from Google: no account details
             and no search results other than the text you copied. IronBuddy itself still sends nothing to Google or to
             us. If you never tap that button, Google Lens is never involved and you can always type the numbers
             instead. The iPhone app has no Google Lens button, never hands a photo to Google&apos;s app and does not
@@ -296,7 +326,8 @@ export default function PrivacyPage() {
           <p>
             <Strong>Search on Google.</Strong> If a food or a barcode is not in the app&apos;s offline list, the app can
             offer a Search on Google button. Only when you tap it, your phone&apos;s browser opens a Google search for
-            the words or the barcode number you were looking at. IronBuddy does not send, receive or store anything for
+            the barcode number, or for the words you typed followed by the word &quot;calories&quot;.
+            IronBuddy does not send, receive or store anything for
             this: the search is made by your browser, under Google&apos;s own privacy policy. It never happens by itself.
           </p>
         </ContentSection>
@@ -321,10 +352,11 @@ export default function PrivacyPage() {
             Android, Apple&apos;s document camera on iPhone (below). Either way the text is read on your phone: PDF and Word files with software built into the
             App (pdf.js, an open-source library from Mozilla, loaded the first time you open a PDF), and pictures,
             scanned pages and scanned PDFs with the same built-in text models that read nutrition labels. You then check
-            the text line by line.
+            the result: clear lines go in as read, and you answer only the lines in doubt before you tap &quot;Add the
+            week&quot;.
           </p>
           <p>
-            <Strong>What the App keeps and does not keep.</Strong> The App keeps only the foods you confirm, as planned
+            <Strong>What the App keeps and does not keep.</Strong> The App keeps only the foods you add, as planned
             meals (section 3). It reads the file or picture into its memory, takes the text out, and drops both when you
             close the check screen or add the lines. It does not save the file, the picture or the text it read, does not
             put them in the backup file, in Android&apos;s backup or in the App&apos;s iCloud copy, and keeps no wording or
@@ -335,7 +367,8 @@ export default function PrivacyPage() {
           <p>
             <Strong>Google&apos;s page scanner.</Strong> On Android, Take a photo opens Google&apos;s document scanner,
             which is part of Google Play services on your phone (Google&apos;s ML Kit). It finds the page, straightens it
-            and can take several pages. It uses the camera under Google Play services&apos; own permission. Google says
+            and can take up to eight pages, and it also lets you pick a picture from your gallery inside Google&apos;s
+            scanner. Google&apos;s scanner runs in Google Play services and opens the camera itself. Google says
             the whole scanner flow operates on the device. The first time, Google Play services fetches the scanner
             itself from Google, which needs an internet connection that one time; after that it needs none. The scanner
             writes the pages you scan as image files on your phone and hands them to the App. The App reads each into
@@ -346,15 +379,16 @@ export default function PrivacyPage() {
             <TextLink href="https://developers.google.com/ml-kit/android-data-disclosure">
               Google&apos;s ML Kit data disclosure
             </TextLink>
-            . If your phone has no Google Play services, has too little memory for the scanner (under 1.7 GB), or has no
-            internet the first time, the App says so and you can use Import a file instead.
+            . If your phone has no Google Play services, if Google reports that it has too little memory for the scanner
+            (Google says it needs 1.7 GB), or if it has no internet the first time, the App says so and you can use
+            Import a file instead.
           </p>
           <p>
             <Strong>Apple&apos;s document camera (iPhone).</Strong> On iPhone, Take a photo opens Apple&apos;s document
-            camera, which is part of iOS (VisionKit). It finds the page, straightens it and can take several pages (at
-            most eight). It uses the camera under the App&apos;s camera permission. Nothing is downloaded and nothing is
-            sent anywhere. The scanner hands the pages to the App as image files in the App&apos;s temporary folder; the
-            App reads them on the phone with its built-in text models and then deletes them.
+            camera, which is part of iOS (VisionKit). It finds the page, straightens it and can take several pages; the
+            App uses the first eight. It uses the camera under the App&apos;s camera permission. The App downloads nothing
+            for it and sends nothing anywhere. The App saves the pages as image files in its temporary folder, loads
+            them into memory, deletes the files, and reads the pages on the phone with its built-in text models.
           </p>
           <p>
             <Strong>Other people&apos;s details and health information.</Strong> A dietitian&apos;s plan can carry details
@@ -372,7 +406,9 @@ export default function PrivacyPage() {
             The App is free to download with a free trial (currently {siteConfig.freeTrialDays} days) that covers
             logging, photos, search, barcodes, My meals and your numbers. Some parts are the full version only, even
             during the trial: meal planning (Week, planned meals on Today and a dietitian&apos;s plan by scan or file),
-            the backup file and exports, share cards, choosing your Today layout and the accent colour. After the
+            the backup file, export and import, the export for a coach, share cards, choosing your Today layout, how
+            Today shows protein, carbs and fat, and the accent colour (on
+            iPhone, anyone can export a copy just before deleting their data). After the
             trial, a one-time purchase through Google Play (Android) or the App Store (iPhone) keeps it unlocked; there
             is no subscription and nothing is charged automatically. Without the purchase your data stays visible but
             logging and editing are locked.
@@ -407,10 +443,9 @@ export default function PrivacyPage() {
           </p>
           <p>
             <Strong>On iPhone</Strong>, now and then, after you have used the App for a while, it may ask iOS to show
-            Apple&apos;s built-in rating prompt. iOS decides whether it appears (at most three times a year), and you can
-            turn such prompts off in Settings → App Store; we do not learn whether you saw it, what you rated or what
-            you wrote. A card in Settings may also open the App&apos;s page on the App Store to write a review; that is a
-            plain link, and we learn nothing from it. The iPhone app does not check for updates itself: the App Store
+            Apple&apos;s built-in rating prompt. iOS decides whether it appears (Apple says at most three times a
+            year), and Apple lets you turn such prompts off in the iPhone&apos;s Settings; we do not learn whether you
+            saw it, what you rated or what you wrote. The iPhone app does not check for updates itself: the App Store
             installs them.
           </p>
         </ContentSection>
@@ -419,18 +454,24 @@ export default function PrivacyPage() {
           <p>As of the date at the top of this page, the App does not:</p>
           <BulletList>
             <li>create accounts or ask you to sign in;</li>
-            <li>send your meals, body data, plans, photos or settings to any server, ours or anyone else&apos;s;</li>
             <li>
-              contain advertising, analytics or crash-reporting code of its own (the Android app does include
-              Google&apos;s client library for the page scanner, section 5);
+              send your meals, body data, plans, photos or settings to any server of ours or of anyone else, except the
+              App&apos;s copy in your own iCloud on iPhone (section 9) and a label photo you choose to hand to Google Lens
+              on Android (section 4);
+            </li>
+            <li>
+              contain advertising, analytics or crash-reporting code (the Android app does include Google&apos;s client
+              libraries for Google Play Billing, the in-app review, in-app updates and the page scanner, sections 5 to 7);
             </li>
             <li>sell, rent or share personal data, or track you across other companies&apos; apps and websites;</li>
             <li>
               access your location, contacts or other apps&apos; data, read your gallery or Photos library, read any
-              file except one you pick in the phone&apos;s own picker (section 5), or use the microphone except when you
-              tap &quot;Say the numbers&quot; (section 4), apart from two things for Google Lens on Android:
-              checking whether Google&apos;s app is installed, and reading the text you copied in Lens, once, when you
-              come back, or text you choose to share to the App (section 4);
+              file except one you pick in the phone&apos;s own picker, the pages the page scanner hands back (section 5)
+              or the photo the camera hands back (section 4), or use the microphone except when you
+              tap &quot;Say the numbers&quot; or &quot;Say it&quot; (section 4), apart from two things for Google Lens on Android:
+              checking whether Google&apos;s app is installed, and reading the text you copied in Lens only while it is
+              waiting for Lens (when you come back, or when you tap &quot;I copied it: paste now&quot;), or text you choose
+              to share to the App (section 4);
             </li>
             <li>receive your payment details (these stay with Google Play or the App Store).</li>
           </BulletList>
@@ -441,8 +482,9 @@ export default function PrivacyPage() {
           <BulletList>
             <li>
               <Strong>Android backup (Google account):</Strong> if backup is turned on in your phone&apos;s settings,
-              Android may keep a backup of the App&apos;s data in a private folder of your Google Drive account and
-              restore it on a new phone. Android&apos;s documentation says this backup is end-to-end encrypted on Android 9
+              Android may keep a backup of the App&apos;s data (the App&apos;s saved data, not plate photos) in your Google
+              account, as Google describes, and restore it on a new phone. Android can also copy the same data straight
+              to a new phone during phone-to-phone transfer. Android&apos;s documentation says this backup is end-to-end encrypted on Android 9
               and later when the phone has a screen lock. This is done entirely by Android and Google; we cannot access these backups. You can turn
               it off or delete it in your phone&apos;s Google backup settings.
             </li>
@@ -450,7 +492,8 @@ export default function PrivacyPage() {
               <Strong>iCloud copy (iPhone only):</Strong> on iPhone, the App keeps one up-to-date copy of your data in
               your own iCloud account, using Apple&apos;s CloudKit. A few seconds after you change something, it replaces
               that copy with your current data: the same data as the backup file (below), plus the date your free trial
-              started and the latest time the App has seen. Plate photos are not in it. The copy sits in the private
+              started, the latest time the App has seen, the App&apos;s version number and when the copy was saved. Plate
+              photos are not in it. The copy sits in the private
               area of your iCloud that only you can open with your Apple ID; it is stored and managed by Apple, and
               IronBuddy has no servers and cannot read it. It runs in the trial too, and it needs you to be signed in to
               iCloud; if you are not, the App does not make one. Deleting the App does not delete the copy: if you
@@ -461,7 +504,7 @@ export default function PrivacyPage() {
             <li>
               <Strong>iCloud Backup (iPhone):</Strong> if iCloud Backup is turned on in your iPhone&apos;s settings, iOS
               includes the App&apos;s data in your iPhone&apos;s backup in your iCloud account and can restore it on a new
-              iPhone. This backup is made and managed entirely by Apple; we cannot access it. You can turn it off or
+              iPhone, as Apple describes. This backup is made and managed entirely by Apple; we cannot access it. You can turn it off or
               manage it in your iPhone&apos;s settings.
             </li>
             <li>
@@ -475,14 +518,17 @@ export default function PrivacyPage() {
             </li>
             <li>
               <Strong>Export a copy (full version):</Strong> a JSON file of your data, including your week plan, sent
-              wherever you choose through the phone&apos;s share sheet.
+              wherever you choose through the phone&apos;s share sheet. On iPhone, &quot;Export a copy first&quot; on the
+              delete screen (section 12) is there for everyone.
             </li>
             <li>
               <Strong>Export for a coach (full version):</Strong> a spreadsheet (CSV) or PDF of your meals and weight
-              for the days you choose, saved or shared where you choose.
+              for the last 7, 30 or 90 days, with your name and your calorie target, and in the PDF also your goal and
+              macro targets, sent through the phone&apos;s share sheet wherever you choose.
             </li>
             <li>
-              <Strong>Share cards (full version):</Strong> a picture of your day or week, made on your phone. Calories
+              <Strong>Share cards (full version):</Strong> a picture of your day or week (your meals, and your first name
+              if you entered one), made on your phone. Calories
               are hidden on the card unless you switch them on. You choose to share it through the phone&apos;s share
               sheet or save it: to your gallery (Pictures → IronBuddy Nutrition) on Android, or to your Photos on
               iPhone, where iOS asks once for permission to add pictures; the App can only add to Photos and never
@@ -507,9 +553,11 @@ export default function PrivacyPage() {
           <p>
             The App sends nothing you enter to us or to any server we run. On Android, Android&apos;s own backup
             (section 9) is made by Android, not by the App. The food database (from USDA, CIQUAL and Open Food
-            Facts), the barcode list and the food recognition model are copies built into the App, so every lookup
-            happens on your phone. On Android, the App itself uses the network only through Google Play (purchase, review prompt,
-            update check), through links you choose to open in your browser, such as this policy, and, the first time you
+            Facts), the barcode list and the food recognition model are copies built into the App, so every lookup in
+            the App happens on your phone; Search on Google, if you tap it, opens a Google search in your browser
+            (section 4). On Android, the App itself uses the network only through Google Play
+            (purchase, review prompt, update check), through links you choose to open in your browser, such as this
+            policy, Search on Google and Follow IronBuddy, and, the first time you
             scan a plan, through Google Play services, which fetches Google&apos;s page scanner once (section 5). Google
             Lens, if you choose to open it (section 4), is Google&apos;s app, not ours. Logging, the food list, barcodes,
             food recognition and reading labels and plans work without an internet connection. Buying the full version,
@@ -517,13 +565,14 @@ export default function PrivacyPage() {
           </p>
           <p>
             <Strong>On iPhone</Strong>, the App sends nothing you enter to us or to any server we run. Apple&apos;s own
-            services make the network connections: StoreKit with the App Store, for the purchase and the free trial
-            item, and CloudKit with your iCloud account, for the App&apos;s iCloud copy (section 9). iCloud Backup is
-            made by iOS, not by the App. The page scanner, speech recognition and barcode reading are part of iOS and
-            work on the phone, with nothing downloaded. Links you choose to open (such as this policy, Search on Google,
-            Sources and Follow IronBuddy) open outside the App, in your browser, a social app or the App Store. Buying
-            the full version and keeping the iCloud copy up to date need an internet connection; logging, the food
-            list, barcodes, food recognition and reading labels and plans work offline.
+            services make the network connections: StoreKit with the App Store, for the purchase, the free trial item
+            and the App Store&apos;s own rating prompt, and CloudKit with your iCloud account, for the App&apos;s iCloud
+            copy (section 9). iCloud Backup is made by iOS, not by the App. The page scanner, speech recognition and
+            barcode reading are part of iOS and work on the phone, and the App downloads nothing for them. Links you
+            choose to open (such as this policy, Search on Google, Sources and Follow IronBuddy) open outside the App, in
+            your browser, a social app or the App Store. Starting the free trial, buying the full version and keeping
+            the iCloud copy up to date need an internet connection; logging, the food list, barcodes, food recognition
+            and reading labels and plans work offline.
           </p>
         </ContentSection>
 
@@ -534,38 +583,43 @@ export default function PrivacyPage() {
           <BulletList>
             <li>
               <Strong>Camera:</Strong> only when you tap to photograph a plate, a barcode or a nutrition label (section
-              4). Google&apos;s page scanner, which you open to scan a plan, uses the camera under Google Play
-              services&apos; own permission, so Android does not ask for the camera for the App there (section 5).
+              4). Google&apos;s page scanner, which you open to scan a plan, runs in Google Play services and opens the
+              camera itself (section 5).
             </li>
             <li>
               <Strong>Files (no permission asked):</Strong> when you tap Import a file on Week, Android&apos;s own file
               picker opens and gives the App only the file you choose (section 5).
             </li>
             <li>
-              <Strong>Microphone:</Strong> only while you tap &quot;Say the numbers&quot;, to recognise the calories and
-              macros you say, on your phone with Android&apos;s own speech recogniser (section 4).
+              <Strong>Microphone:</Strong> only after you tap &quot;Say the numbers&quot; or &quot;Say it&quot;, to recognise
+              what you say, on your phone with Android&apos;s own on-device speech recogniser (section 4).
             </li>
             <li>
-              <Strong>Internet:</Strong> needed by Google Play for the purchase, the review prompt and update notices,
-              by Google Play services the first time you scan a plan (to fetch Google&apos;s page scanner once), and to
-              open links in your browser. It is not used to upload your data.
+              <Strong>Internet:</Strong> declared by the App. The App&apos;s own screens are blocked from contacting any
+              server (section 10); Google Play, Google Play services and your browser make their own connections. It is
+              not used to upload your data.
             </li>
             <li>
               <Strong>Google Play Billing:</Strong> to make and confirm the one-time purchase.
             </li>
             <li>
-              <Strong>Storage (older Android versions only):</Strong> to keep the backup file and exports in your
-              Download folder, and to read a backup file you choose to import. After a reinstall, Android may ask you
-              to choose the IronBuddy Nutrition folder once; the App then reaches only that folder.
+              <Strong>Storage (Android 12 and older):</Strong> declared so the App can keep the backup file in Download →
+              IronBuddy Nutrition on older phones; the App reads files only through the phone&apos;s own picker. If an
+              earlier install left a backup file there, the App asks you to choose the IronBuddy Nutrition folder
+              inside Download once, in Android&apos;s folder picker; the App then reaches only that folder.
             </li>
             <li>
               <Strong>Google app visibility and clipboard (no permission needed):</Strong> the App can see whether
-              Google&apos;s app is installed, only to offer Google Lens, and it reads the clipboard only once after you
-              return from Lens, or text you choose to share to the App (section 4). It cannot see your other apps.
+              Google&apos;s app is installed, only to offer Google Lens, and it reads the clipboard only while it is
+              waiting for Lens: when you come back, or when you tap &quot;I copied it: paste now&quot;. It also takes text
+              you choose to share to the App (section 4). It looks up no other app; Android lets it see only
+              Google&apos;s app, camera apps, apps that accept a shared picture and Google Play&apos;s billing service, so
+              that taking a photo, handing a photo to Lens and the purchase work.
             </li>
             <li>
               <Strong>Notifications (Android 13 and later, optional):</Strong> two, both made on your phone and neither
-              holding your data: the &quot;Tap to go back&quot; notification while Google Lens is open (section 4), and,
+              holding your data: the &quot;Copied the table? Tap to go back&quot; notification while Google Lens is open
+              (section 4), and,
               only if you switch it on in Progress, the weekly weigh-in reminder on the day and time you pick. No offers
               or other notifications. You can turn the reminder off in Progress and either notification off at any time
               in Android&apos;s settings for the App.
@@ -581,7 +635,8 @@ export default function PrivacyPage() {
               (sections 4 and 5).
             </li>
             <li>
-              <Strong>Microphone and Speech Recognition:</Strong> only while you tap &quot;Say the numbers&quot;, recognised
+              <Strong>Microphone and Speech Recognition:</Strong> only after you tap &quot;Say the numbers&quot; or &quot;Say
+              it&quot;, recognised
               on the iPhone itself (section 4).
             </li>
             <li>
@@ -607,8 +662,12 @@ export default function PrivacyPage() {
         <ContentSection id="deleting-data" title="12. How to delete your data">
           <BulletList>
             <li>
-              <Strong>In the App (Android):</Strong> Settings → Reset all data erases everything the App stores on your
-              phone.
+              <Strong>In the App (Android):</Strong> Settings → Data → Reset all data erases your profile, meals, saved
+              meals, plate photos, weigh-ins, plans and settings on your phone. It keeps your trial dates and purchase,
+              and the copy from just before your last import (used by Undo last import); the backup file in Download →
+              IronBuddy Nutrition is replaced with your new data once you finish setting up again. Once the free trial
+              has ended without a purchase, Reset all data is not shown; uninstalling the App then removes its data
+              from the phone.
             </li>
             <li>
               <Strong>In the App (iPhone):</Strong> Settings → Your data → Delete my profile and all data shows what will
@@ -621,7 +680,12 @@ export default function PrivacyPage() {
               does not restart.
             </li>
             <li>
-              <Strong>Plate photos:</Strong> deleting a meal deletes its photo copy too.
+              <Strong>Plate photos:</Strong> deleting a meal deletes its photo copy too, unless a saved meal in My meals
+              still uses it; the photo goes once neither does.
+            </li>
+            <li>
+              <Strong>Camera files on Android:</Strong> the full-size files the camera leaves in the App&apos;s storage
+              (section 4) are not removed by deleting a meal or by Reset all data; uninstalling the App removes them.
             </li>
             <li>
               <Strong>Scanned plan pages:</Strong> on Android, Google&apos;s page scanner writes the pages you scan as
@@ -629,8 +693,8 @@ export default function PrivacyPage() {
               when they are deleted (section 5). On iPhone, the App deletes the scanned pages once it has read them.
             </li>
             <li>
-              <Strong>Your week plan:</Strong> remove planned meals one by one on Week, or use Reset all data (Android)
-              or Delete my profile and all data (iPhone), which erases the plan with everything else. Copies in your
+              <Strong>Your week plan:</Strong> remove planned meals on Week, or use Reset all data (Android, see above for
+              what it keeps) or Delete my profile and all data (iPhone). Copies in your
               phone&apos;s backup, in the backup file and in exports are covered below.
             </li>
             <li>
@@ -638,7 +702,7 @@ export default function PrivacyPage() {
               iPhone → IronBuddy Nutrition folder, but not the App&apos;s iCloud copy.
             </li>
             <li>
-              <Strong>Files you made:</Strong> the backup file and exports in your Download folder (Android), a backup
+              <Strong>Files you made:</Strong> the backup file in your Download folder (Android), a backup
               file in a folder you chose such as iCloud Drive (iPhone), share cards saved to your gallery or Photos, and
               anything you shared, are not removed by uninstalling or by Reset all data; delete them yourself if you no
               longer want them.
@@ -680,9 +744,11 @@ export default function PrivacyPage() {
           <p>
             Under data protection laws such as the EU General Data Protection Regulation you have the right to access,
             correct, delete or take a copy of personal data held about you. Because your data is held only on your own
-            phone (and, on iPhone, in your own iCloud), you can do all of this yourself in the App: view and edit
-            everything, export a copy (full version) and delete everything (Reset all data on Android, Delete my profile
-            and all data on iPhone). If you have a question or a request, email us at{" "}
+            phone (and, on iPhone, in your own iCloud), you can do this yourself: view and edit everything in the App,
+            export a copy (full version; on iPhone also just before you delete everything), and delete your data (on
+            Android, Settings → Data → Reset all data, or uninstall the App, which is the only way once the trial has
+            ended without a purchase; on iPhone, Delete my profile and all data). If you have a question or a request,
+            email us at{" "}
             <TextLink href={`mailto:${email}`}>{email}</TextLink>. You also have the right to complain to the data
             protection authority in your country.
           </p>

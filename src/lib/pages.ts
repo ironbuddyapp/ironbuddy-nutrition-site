@@ -111,7 +111,7 @@ export const pages = {
     label: "Privacy Policy",
     title: "Privacy Policy – IronBuddy Nutrition Tracker",
     description:
-      "Privacy policy of IronBuddy: Nutrition Tracker. Your meals, weight and photos stay on your phone: no account, no analytics, nothing sent to us.",
+      "Privacy policy of IronBuddy: Nutrition Tracker for Android and iPhone. Your meals, weight and photos stay yours: no account, no analytics, nothing sent to us.",
     summary: "What the app keeps on your phone, and what it never sends anywhere.",
     keywords: null,
     published: LAUNCH,
