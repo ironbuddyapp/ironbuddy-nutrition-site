@@ -41,6 +41,8 @@ const PRIVACY_CORRECTED = "2026-11-08";
 const PRIVACY_FEATURES = "2026-11-09";
 /** Privacy policy names the social media rows and the counting page on the Workout site (HQ job J-20261109-3). */
 const PRIVACY_SOCIAL = "2026-11-09";
+/** Privacy policy explains the Search on Google button of version 0.1.23 (HQ job J-20261113-1). */
+const PRIVACY_GOOGLE_SEARCH = "2026-11-13";
 
 /** The current screenshot set (appScreenshots in content.ts). */
 const screenshotImages = [
@@ -111,7 +113,7 @@ export const pages = {
     summary: "What the app keeps on your phone, and what it never sends anywhere.",
     keywords: null,
     published: LAUNCH,
-    modified: PRIVACY_SOCIAL,
+    modified: PRIVACY_GOOGLE_SEARCH,
   },
 } as const satisfies Record<string, PageDef>;
 
