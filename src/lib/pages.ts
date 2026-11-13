@@ -43,6 +43,8 @@ const PRIVACY_FEATURES = "2026-11-09";
 const PRIVACY_SOCIAL = "2026-11-09";
 /** Privacy policy explains the Search on Google button of version 0.1.23 (HQ job J-20261113-1). */
 const PRIVACY_GOOGLE_SEARCH = "2026-11-13";
+/** Privacy policy covers the iPhone app as well as Android, for the App Store submission (HQ job J-20261114-1). */
+const PRIVACY_IPHONE = "2026-11-14";
 
 /** The current screenshot set (appScreenshots in content.ts). */
 const screenshotImages = [
@@ -113,7 +115,7 @@ export const pages = {
     summary: "What the app keeps on your phone, and what it never sends anywhere.",
     keywords: null,
     published: LAUNCH,
-    modified: PRIVACY_GOOGLE_SEARCH,
+    modified: PRIVACY_IPHONE,
   },
 } as const satisfies Record<string, PageDef>;
 
