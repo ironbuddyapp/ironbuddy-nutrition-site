@@ -264,6 +264,12 @@ export default function PrivacyPage() {
             App picks out the nutrition numbers on your phone, fills in the form for you to check, and does not keep
             the text.
           </p>
+          <p>
+            <Strong>Search on Google.</Strong> If a food or a barcode is not in the app&apos;s offline list, the app can
+            offer a Search on Google button. Only when you tap it, your phone&apos;s browser opens a Google search for
+            the words or the barcode number you were looking at. IronBuddy does not send, receive or store anything for
+            this: the search is made by your browser, under Google&apos;s own privacy policy. It never happens by itself.
+          </p>
         </ContentSection>
 
         <ContentSection id="recognition" title="5. Food recognition, label reading and plan reading on your phone">
