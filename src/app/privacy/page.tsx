@@ -690,7 +690,8 @@ export default function PrivacyPage() {
             <li>
               <Strong>Scanned plan pages:</Strong> on Android, Google&apos;s page scanner writes the pages you scan as
               image files on your phone. The App does not delete them, and Google does not say where they are stored or
-              when they are deleted (section 5). On iPhone, the App deletes the scanned pages once it has read them.
+              when they are deleted (section 5). On iPhone, the App deletes the scanned page files as soon as it has
+              loaded them into memory.
             </li>
             <li>
               <Strong>Your week plan:</Strong> remove planned meals on Week, or use Reset all data (Android, see above for
